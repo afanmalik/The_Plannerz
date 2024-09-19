@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>ThePlannerz</title>
+  <link rel="icon" type="image/png" href="images/LOGO.png.png">
+        <!-- Required meta tags -->
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://api.fontshare.com/v2/css?f[]=telma@500&f[]=switzer@600&f[]=panchang@400&f[]=tanker@400&f[]=excon@700&f[]=author@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .navbar {
+  transition: all 0.3s ease;
+  padding: 1px; /* Adjust as needed */
+}
+
+.navbar-shrink {
+  padding: 0.5rem; /* Adjust padding for the smaller size */
+}
+
+.navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+.navbar-shrink .navbar-brand img {
+  width: 150px; /* Adjust the width when the navbar shrinks */
+  height: auto; /* Maintain aspect ratio */
+}
+  *::selection{
+background-color: #f00000;
+color: aliceblue;
+ }
+ .fix{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://img.freepik.com/premium-photo/intricate-floral-design-with-swirls-leaf-motifs-adorns-beige-background-providing-elegant-sophisticated-template-design-creativity_127746-8575.jpg?w=996);
+  background-attachment: fixed;}
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    swiper-container {
+      width: 100%;
+      height:80%;
+    }
+
+    swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .d{
+        font-family: 'Excon', sans-serif;
+    }
+    .b{
+        font-family: 'Excon', sans-serif; 
+    }
+    .c{
+        font-family: 'Excon', sans-serif;
+    }
+    .p{
+        font-size: 17px;
+    }
+    .d{
+        font-family: 'Excon', sans-serif; 
+    }
+    nav{
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://cdn.wallpapersafari.com/78/84/xGwRnc.jpg);
+ background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  
+  
+  
+
+}
+.a{
+  position: relative;
+  text-decoration:none;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #0e0000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding: 0 20px;
+  
+  
+}
+
+.a:after{
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.a:hover:after{
+  width: 100%;
+
+}
+
+  </style>
+
+<body>
+  <nav
+        class="navbar navbar-expand-sm navbar-light bg-dark sticky-top"
+       >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="" src="images/LOGO.png.png" alt="" width="150" height="75">
+              </a>
+            <button
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav md-auto mt-2 mx-lg-5">
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./index.html" aria-current="page"
+                            >HOME
+                            <span class="visually-hidden">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item a dropdown">
+                        <a
+                            class="nav-link text-white dropdown-toggle"
+                            href="#"
+                            id="dropdownId"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >OUR SERVICES</a
+                        >
+                        <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownId"
+                        >
+                            <a class="dropdown-item" href="#"
+                                >WEDDING & RECEPTION</a
+                            >
+                            <a class="dropdown-item" href="./birthday.html"
+                                >BIRTHDAY</a
+                            >
+                            <a class="dropdown-item" href="./bridal shower.html"
+                                >BRIDAL SHOWER</a
+                            >
+                            <a class="dropdown-item" href="./photograph.html"
+                                >PHOTOGRAPHY</a
+                            >
+                            <a class="dropdown-item" href="./dholki.html"
+                                >PALKI & DOLI</a
+                            >
+                        </div>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       </nav>
+  <br>
+  
+ <h1 class="text-center d">Elite Birthday Party Specialist</h1>
+ <br>
+    <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
+    slides-per-view="3">
+    <swiper-slide><img height="auto" width="100%" src="https://homebnc.com/homeimg/2022/06/02-birthday-table-decoration-ideas-designs-homebnc.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://i.pinimg.com/736x/9a/9c/71/9a9c712abbce93e707a3e9bd14a1a2df.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://i.pinimg.com/750x/a2/3e/3f/a23e3f2e175105b2a5a14c2cae76544c.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://assets-news.housing.com/news/wp-content/uploads/2022/02/23021142/BIRTHDAY-1.png" alt=""></swiper-slide>
+    <swiper-slide><img src="https://rukminim2.flixcart.com/image/850/1000/ktep2fk0/birthday-combo/e/2/m/black-golden-white-red-happy-birthday-decoration-combo-kit-with-original-imag6r67eej2jfvs.jpeg?q=20&crop=false alt="></swiper-slide>
+    <swiper-slide><img src="https://s.alicdn.com/@sc04/kf/H028a692040e641a2b87547766e5a00d3g.jpg_300x300.jpg alt="></swiper-slide>
+    <swiper-slide><img src="https://st4.depositphotos.com/7424484/19700/i/450/depositphotos_197007008-stock-photo-one-year-birthday-decorations-ides.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://i.pinimg.com/736x/2b/f8/64/2bf86481eb01da269e8abe0fb65b4add.jpg" alt=""></swiper-slide>
+    <swiper-slide><img src="https://specialyou.in/cdn/shop/files/gold.jpg?v=1688553879&width=2048" alt=""></swiper-slide>
+  </swiper-container>
+<br>
+<br>
+<br>
+  <h2 class="text-center b">Design plan</h2>
+  <p class="text-center p">
+    
+    Here’s a revised version of your text with some word changes:
+    
+    Birthdays are amazing! <br> This is our signature event, and we started our journey as the premier Birthday Event Planner by creating and <br> perfecting themed celebrations. Superheroes, Disney, unicorns, character-based themes,  and a variety of customized options <br>are just a few of the countless themes we offer.  Our team is highly imaginative and enthusiastic <br> when it comes to crafting birthday setups.  Whether it’s for a first birthday  <br>celebration or an event for an older child, discover the unique theme that will make this day truly special.
+    
+    </p>
+    <h3 class="text-center c">birthday planner
+    </h3>
+    <p class="text-center p">Decor for the cake table, a backdrop, balloons, cupcakes, cookies, cake pops, a fresh flower arrangement on the cake table, <br> a welcome sign, props, a sash, cake toppers, and a portable photo booth frame are all included.
+    </p>
+     <p class="text-center p">
+        Here’s a revised version of your text with some word changes: <br>
+        
+        Note: Cake and birthday goodie bags are not included and will be billed separately in this package. Additional customization <br>and add-ons will incur extra charges based on the client’s requirements and available space.</p>
+
+        <h4 class="text-center d">Birthday videos
+        </h4>
+        <div class="container">
+            <swiper-container class="mySwiper" navigation="true">
+                <swiper-slide><video  width="auto" height="400"   controls src="https://videos.pexels.com/video-files/3827573/3827573-uhd_2560_1440_30fps.mp4"></video></swiper-slide>
+                <swiper-slide><video  width="auto" height="400"  controls src="https://videos.pexels.com/video-files/3831835/3831835-uhd_2732_1440_25fps.mp4"></video></swiper-slide>
+                <swiper-slide><video  width="auto" height="400" controls src="https://videos.pexels.com/video-files/11321635/11321635-uhd_2560_1440_30fps.mp4"></video></swiper-slide>
+              </swiper-container>
+        </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<br>
+<br>
+
+    
+
+    <!-- place footer here -->
+    <footer style="background-color: #fff6f2; color: #430a0a; background-image: url(https://media.istockphoto.com/id/1345222226/photo/champagne-beige-earth-color-gradient-background.jpg?s=612x612&w=0&k=20&c=QuWuOispyvPKDSsRiTHqEHq3f5tqn9SPbSj_U8JiZbg=); background-size: cover; padding: 3rem 0;">
+      <div class="container">
+          <!-- About Us Section -->
+          <div class="row mb-4">
+              <div class="col-md-4 mb-4">
+                  <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>ABOUT US<span style="color: #ffbb00;">]</span></h6>
+                  <p style="line-height: 1.6; font-size: 14px; font-family: 'Clash Grotesk', sans-serif;">
+                      The Plannerz is a premier event management company located in Karachi, specializing in orchestrating a diverse range of events from professional business meetings and thrilling domestic tours to opulent weddings. As a versatile and comprehensive service provider, we excel in delivering extraordinary celebrations tailored to your every need.
+                  </p>
+              </div>
+  
+              <!-- Page Headings with Links -->
+              <div class="col-md-4 mb-4">
+                  <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>PAGES<span style="color: #ffbb00;">]</span></h6>
+                  <div>
+                      <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Event Videos</a>
+                      <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Gallery</a>
+                      <a href="#" style="color: #000000; text-decoration: none; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Thematic Event</a>
+                  </div>
+              </div>
+  
+              <!-- Help Section with Links -->
+              <div class="col-md-4 mb-4">
+                  <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>HELP<span style="color: #ffbb00;">]</span></h6>
+                  <div>
+                      <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Photography Packages</a>
+                      <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Blogs</a>
+                      <a href="#" style="color: #000000; text-decoration: none; font-family: 'Satoshi', sans-serif; font-weight: bold;">Food and Catering</a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Social Media Links -->
+          <div class="text-center mb-4">
+              <h4>Follow Us</h4>
+              <a href="https://facebook.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="https://instagram.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+              </a>
+              <a href="https://linkedin.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+              </a>
+          </div>
+  
+          <!-- Contact Information and Footer Bottom -->
+          <div class="text-center">
+              <p style="margin-bottom: 1rem;">
+                  ThePlannerz Headquarters, 456 Celebration Avenue, Suite 200, Event City, EC 12345 | Email: info@theplannerz.com | Phone: +123 456 7890
+              </p>
+              <p style="margin-bottom: 1rem;">
+                  © 2022, Company Inc. All rights reserved. @ The Plannerz Events
+              </p>
+              <div>
+                  <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
+                  <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Terms</a>
+                  <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Careers</a>
+                  <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline;">Sitemap</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePlannerz</title>
+    <link rel="icon" type="image/png" href="images/LOGO.png.png">
+        <!-- Required meta tags -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,600&f[]=chillax@500&f[]=panchang@500&f[]=excon@900&f[]=quicksand@500&f[]=britney@400&f[]=nunito@400&f[]=melodrama@500&f[]=satoshi@400&f[]=rosaline@400&f[]=clash-grotesk@600&f[]=telma@500&f[]=neco@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         
+         *::selection{
+background-color: #f00000;
+color: aliceblue;
+ }
+ .navbar {
+  transition: all 0.3s ease;
+  padding: 1px; /* Adjust as needed */
+}
+
+.navbar-shrink {
+  padding: 0.5rem; /* Adjust padding for the smaller size */
+}
+
+.navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+.navbar-shrink .navbar-brand img {
+  width: 150px; /* Adjust the width when the navbar shrinks */
+  height: auto; /* Maintain aspect ratio */
+}
+        .gallery-img {
+            width: 100%;
+            height: auto; /* Adjust the height as needed */
+            object-fit: cover;
+        }
+        .h1{
+            font-family: 'Chillax', sans-serif;
+            font-size: 50px;
+            white-space: 50px;
+            letter-spacing: 10px;
+            color: rgb(103, 96, 75);
+            
+        }
+        .div1{
+            background-color:rgb(255, 245, 232);
+            
+        }
+        .b{
+            padding: 25px;
+            font-size: 17px;
+            color: rgb(103, 96, 75);
+            font-family: 'Neco', serif;
+            
+        }
+        .b:hover{
+            color:brown;
+        }
+        .div2{
+            text-align: center;
+        }
+        nav{
+  backdrop-filter: blur(100px);
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://cdn.wallpapersafari.com/78/84/xGwRnc.jpg);
+ background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  height: 120px;
+  
+  
+
+}
+.a{
+  position: relative;
+  text-decoration:none;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #0e0000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding: 0 20px;
+  
+  
+}
+
+.a:after{
+  content: "";
+  position: absolute;
+  background-color: #e7e7e7;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.a:hover:after{
+  width: 100%;
+
+}
+.p3{
+    font-family: 'Clash Display', sans-serif;
+    font-size: 30px;
+  }
+  .fancy {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 11px;
+   }
+   
+   .fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+   
+   .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+   }
+   
+   .fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy:hover {
+    color: white;
+    background: black;
+   }
+   
+   .fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+   }
+   
+   .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+   .insta{
+    width: 20px;
+   } 
+   #name{
+    color: rgb(34, 123, 202);
+  }
+  .div2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px; /* Adds space between links */
+      padding: 20px; /* Optional: Adds padding around the container */
+    }
+
+    .div2 .b {
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 20px;
+     text-decoration: underline;
+      padding: 25px;
+      font-size: 17px;
+      color: rgb(103, 96, 75);
+      font-family: 'Neco', serif;
+      transition: 0.5s; /*
+       Optional: Background color for links */
+    }
+    .b:hover{
+        color: brown;
+        
+    }
+ /* Media query for mobile screens */
+ @media only screen and (max-width: 480px) {
+      .div2 {
+        flex-direction: column; /* Stacks the links vertically */
+        align-items: center; /* Centers the links horizontally */
+      }
+
+      .div2 .b {
+        width: 100%; /* Makes the links full width */
+        text-align: center; /* Centers the text inside the links */
+        padding: 15px 0; /* Adjusts padding for better touch targets on mobile */
+      }
+    }
+
+    </style>
+</head>
+<body>
+    <nav
+        class="navbar navbar-expand-sm navbar-light bg-dark sticky-top"
+       >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="" src="images/LOGO.png.png" alt="" width="150" height="75">
+              </a>
+            <button
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav md-auto mt-2 mx-lg-5">
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./index.html" aria-current="page"
+                            >HOME
+                            <span class="visually-hidden">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item a dropdown">
+                        <a
+                            class="nav-link text-white dropdown-toggle"
+                            href="#"
+                            id="dropdownId"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >OUR SERVICES</a
+                        >
+                        <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownId"
+                        >
+                            <a class="dropdown-item" href="./wedding and reception.html"
+                                >WEDDING & RECEPTION</a
+                            >
+                            <a class="dropdown-item" href="./birthday.html"
+                                >BIRTHDAY</a
+                            >
+                            <a class="dropdown-item" href="./bridal shower.html"
+                                >BRIDAL SHOWER</a
+                            >
+                            <a class="dropdown-item" href="./photograph.html"
+                                >PHOTOGRAPHY</a
+                            >
+                            <a class="dropdown-item" href="./dholki.html"
+                                >PALKI & DOLI</a
+                            >
+                        </div>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       </nav>
+    <div class="div1">
+    <h1 class="h1 text-center">
+        GALLERY
+    </h1>
+    <br>
+    <div class="div2">
+        <a class="b text-center" href="./gallery.html">Sunshine Festival</a>
+        <a class="b text-center" href="./rustic.html">Rustic & Gold Theme</a>
+        <a class="b text-center" href="./engagement.html">Engagement Reception</a>
+        <a class="b text-center" href="./whitegold.html">White & Gold Theme</a>
+        <a class="b text-center" href="./mehndi.html">Rustic Mehndi</a>
+        <a class="b text-center" href="./black.html">Black & Gold Setup</a>
+
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://images.prismic.io/eventsgyani/797f1837-a56c-4dfc-9e44-af02efc96b5d_yellow+and+white+touch.jpg?auto=compress,format&rect=0,0,667,667&w=740&h=740" class="card-img-top gallery-img" alt="Image 1">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://shaadiwish.com/blog/wp-content/uploads/2019/05/8-1.jpg" alt="Image 2">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.yE1RMvxVOg3CfyGEWt9qhQHaFI?rs=1&pid=ImgDetMain" alt="Image 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/R.cd1db87dc25be1669d0ae879ea18c746?rik=JrQm5BbZ9%2bcV8A&pid=ImgRaw&r=0" alt="Image 4">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://images.shaadisaga.com/shaadisaga_production/photos/pictures/002/120/395/new_medium/13.jpg?1606212067" alt="Image 5">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://i.pinimg.com/originals/53/cd/14/53cd14dee41e596ae68a2c30f0a6e78d.jpg" alt="Image 6">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://kraftstarmanagement.com/wp-content/uploads/2019/05/mehendi-function-ideas1-1024x768.jpg" alt="Image 7">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://th.bing.com/th/id/OIP.S-S0EKrFQY9VGAhpXRXfVAHaE7?rs=1&pid=ImgDetMain" class="card-img-top gallery-img" alt="Image 8">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://deowgxgt4vwfe.cloudfront.net/uploads/1680173111_large.jpg" class="card-img-top gallery-img" alt="Image 9">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2019/08/mehndi-decor.jpg" class="card-img-top gallery-img" alt="Image 10">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://www.weddingsutra.com/images/wedding-images/blog-images/rhea-anish/rhea-anish-05.jpg" alt="Image 11">
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/premium-photo/room-with-yellow-curtain-that-says-flowers-top_1209326-72285.jpg" class="card-img-top gallery-img" alt="Image 12">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<h3 class="text-center p3"><b>Let's create unforgettable moments with <span id="name">#ThePlannerz</span></b> <span><a class="fancy" href="#">
+    <span class="top-key"></span>
+    <span class="text"><i class="fa-brands fa-instagram insta"></i>Follow us on Instagram</span>
+    <span class="bottom-key-1"></span>
+    <span class="bottom-key-2"></span>
+  </a></span> </h3>
+
+
+  <footer style="background-color: #fff6f2; color: #430a0a; background-image: url(https://media.istockphoto.com/id/1345222226/photo/champagne-beige-earth-color-gradient-background.jpg?s=612x612&w=0&k=20&c=QuWuOispyvPKDSsRiTHqEHq3f5tqn9SPbSj_U8JiZbg=); background-size: cover; padding: 3rem 0;">
+    <div class="container">
+        <!-- About Us Section -->
+        <div class="row mb-4">
+            <div class="col-md-4 mb-4">
+                <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>ABOUT US<span style="color: #ffbb00;">]</span></h6>
+                <p style="line-height: 1.6; font-size: 14px; font-family: 'Clash Grotesk', sans-serif;">
+                    The Plannerz is a premier event management company located in Karachi, specializing in orchestrating a diverse range of events from professional business meetings and thrilling domestic tours to opulent weddings. As a versatile and comprehensive service provider, we excel in delivering extraordinary celebrations tailored to your every need.
+                </p>
+            </div>
+
+            <!-- Page Headings with Links -->
+            <div class="col-md-4 mb-4">
+                <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>PAGES<span style="color: #ffbb00;">]</span></h6>
+                <div>
+                    <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Event Videos</a>
+                    <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Gallery</a>
+                    <a href="#" style="color: #000000; text-decoration: none; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Thematic Event</a>
+                </div>
+            </div>
+
+            <!-- Help Section with Links -->
+            <div class="col-md-4 mb-4">
+                <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>HELP<span style="color: #ffbb00;">]</span></h6>
+                <div>
+                    <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Photography Packages</a>
+                    <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Blogs</a>
+                    <a href="#" style="color: #000000; text-decoration: none; font-family: 'Satoshi', sans-serif; font-weight: bold;">Food and Catering</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="text-center mb-4">
+            <h4>Follow Us</h4>
+            <a href="https://facebook.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://linkedin.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+
+        <!-- Contact Information and Footer Bottom -->
+        <div class="text-center">
+            <p style="margin-bottom: 1rem;">
+                ThePlannerz Headquarters, 456 Celebration Avenue, Suite 200, Event City, EC 12345 | Email: info@theplannerz.com | Phone: +123 456 7890
+            </p>
+            <p style="margin-bottom: 1rem;">
+                © 2022, Company Inc. All rights reserved. @ The Plannerz Events
+            </p>
+            <div>
+                <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
+                <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Terms</a>
+                <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Careers</a>
+                <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline;">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

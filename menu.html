@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>ThePlannerz</title>
+        <link rel="icon" type="image/png" href="images/LOGO.png.png">
+        <!-- Required meta tags -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,600&f[]=chillax@500&f[]=panchang@500&f[]=excon@900&f[]=quicksand@500&f[]=britney@400&f[]=nunito@400&f[]=melodrama@500&f[]=satoshi@400&f[]=rosaline@400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Demo styles -->
+        <style>
+            *::selection{
+background-color: #f00000;
+color: aliceblue;
+ }
+             .fix{
+     width: 100%;
+     height: 100%;
+     background-position: center;
+    }
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            html,
+            body {
+                position: relative;
+                height: 100%;
+                background-color: #fcf4ea ;
+            }
+
+            body {
+                
+                background-size: cover;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                color: #000;
+                margin: 0;
+                padding: 0;
+            }
+            .con{
+                background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+               border-radius: 30px;
+            }
+            .swiper {
+                width: 100%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+
+            .swiper-slide {
+                background-position: center;
+                background-size: cover;
+                width: 300px;
+                height: 400px;
+            }
+
+            .swiper-slide img {
+                display: block;
+                width: 100%;
+            }
+            .h1{
+                font-family: 'Quicksand', sans-serif;
+                font-weight: 800;
+                text-decoration: solid;
+                font-size: 27px;
+                
+            }
+            .p{
+                font-size: 15px;
+                text-align: center;
+                font-family: 'Satoshi', sans-serif;
+                text-decoration: solid;
+                color: rgb(84, 84, 67);
+            }
+            .h2{
+                font-family: 'Excon', sans-serif;
+            }
+            .con2{
+                background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+            }
+            .div2{
+                background-color: #fcf4ea;
+                height: auto;
+            }
+            .div3{
+                background-color: #fcf4ea;
+            }
+            .fancy {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 11px;
+   }
+   
+   .fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+   
+   .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+   }
+   
+   .fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy:hover {
+    color: white;
+    background: black;
+   }
+   
+   .fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+   }
+   
+   .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+   .insta{
+    width: 20px;
+   } 
+  #name{
+    color: rgb(34, 123, 202);
+  }
+  .p2{
+    font-family: 'Clash Display', sans-serif;
+    font-size: 20px;
+  }
+  nav{
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://cdn.wallpapersafari.com/78/84/xGwRnc.jpg);
+ background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  
+  
+  
+
+}
+.navbar {
+  transition: all 0.3s ease;
+  padding: 1px; /* Adjust as needed */
+}
+
+.navbar-shrink {
+  padding: 0.5rem; /* Adjust padding for the smaller size */
+}
+
+.navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+.navbar-shrink .navbar-brand img {
+  width: 150px; /* Adjust the width when the navbar shrinks */
+  height: auto; /* Maintain aspect ratio */
+}
+.a{
+  position: relative;
+  text-decoration:none;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #0e0000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding: 0 20px;
+  
+  
+}
+
+.a:after{
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.a:hover:after{
+  width: 100%;
+
+}
+            
+        </style>
+    </head>
+
+    <body>
+        <nav
+        class="navbar navbar-expand-sm navbar-light bg-dark sticky-top"
+       >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="" src="images/LOGO.png.png" width="150" height="75">
+              </a>
+            <button
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav md-auto mt-2 mx-lg-5">
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./index.html" aria-current="page"
+                            >HOME
+                            <span class="visually-hidden">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item a dropdown">
+                        <a
+                            class="nav-link text-white dropdown-toggle"
+                            href="#"
+                            id="dropdownId"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >OUR SERVICES</a
+                        >
+                        <div
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownId"
+                        >
+                            <a class="dropdown-item" href="./wedding and reception.html"
+                                >WEDDING & RECEPTION</a
+                            >
+                            <a class="dropdown-item" href="./birthday.html"
+                                >BIRTHDAY</a
+                            >
+                            <a class="dropdown-item" href="./bridal shower.html"
+                                >BRIDAL SHOWER</a
+                            >
+                            <a class="dropdown-item" href="./photograph.html"
+                                >PHOTOGRAPHY</a
+                            >
+                            <a class="dropdown-item" href="./dholki.html"
+                                >PALKI & DOLI</a
+                            >
+                        </div>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       </nav>
+      <div class="fix">
+        <br>
+        <h1 class="text-center h1">DELICIOUS FLAVOR AND FINE DINING <br> MARRIAGE FEAST AND CATERING</h1>
+        <div class="con">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/5.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/6.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/7.png" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="div2">
+            <br>
+            <br>
+        <p class="text-center p">Food is a crucial aspect of wedding and event planning. We provide the best catering services in Karachi <br> to ensure your event is a memorable one. Each event involves extensive discussions among family <br> members to finalize a menu that satisfies everyone's tastes. Today, both taste and presentation are <br> vital to the success of your event. Delicious food, beautifully presented, is essential, <br> and only experts can deliver this level of excellence. We bring chefs from top-tier restaurants <br> in Pakistan to offer a diverse selection of cuisines from our menu, delighting your guests with every bite.</p>
+        <br>
+        <h2 class="text-center h2">THE SIGNIFICANCE OF WEDDING MENU AND CATERING
+        </h2>
+        <p class="text-center p">Food is a crucial aspect of wedding and event planning. We provide the best catering services in Karachi to ensure <br> your event is a memorable one. Each event involves extensive discussions among family members to finalize <br> a menu that satisfies everyone's tastes. Today, both taste and presentation are vital to the success of your event. <br> Delicious food, beautifully presented, is essential, and only experts  can deliver <br> this level of excellence. We bring chefs from top-tier restaurants in Pakistan to offer a <br> diverse selection of cuisines from our menu, delighting your guests with every bite</p>
+        </div>
+        <br>
+        <br>
+        
+        <h1 class="text-center h1">DELICIOUSLY YOURS <br> MEHNDI EVENT MENU SPECIALTIES</h1>
+        <div class="con2">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/MENU1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/MENU2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/MENU3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/MENU4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/MENU5.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/MENU6.png" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/MENU7.png" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="div3">
+            <br>
+        <p class="text-center p">A Mehndi event is a lively celebration brimming with music, dance, and elaborate henna designs. <br> Amidst the vibrant festivities, the Mehndi event menu shines, presenting a delightful assortment of flavors and culinary treats. <br> Featuring traditional favorites alongside innovative fusion dishes, the Mehndi event menu <br> celebrates rich cultural heritage and culinary excellence. In this section, we delve into the delicious <br> offerings and unique dining experience that guests can look forward to at a Mehndi event</p>
+        <h2 class="text-center h2"> ENGAGING FOOD STATIONS</h2>
+        <p class="text-center p">
+            To elevate the Mehndi event experience, engaging food stations are often set up, allowing guests to interact directly <br> with the culinary delights. Live stations offering freshly baked naans, sizzling kebabs, <br> and customizable chaats bring an element of excitement, letting guests tailor their dining experience <br> to their tastes. The aroma of spices permeates the air as guests gather around these stations, <br> creating an interactive and memorable culinary journey.
+            <br>
+            <br>
+            The Mehndi event menu is a gastronomic celebration that showcases the cultural richness and diversity of the region. <br> From traditional favorites to innovative fusion dishes, the menu caters to various palates and preferences. <br>As guests savor the flavorful feast, they become immersed in the Mehndi celebration, experiencing the joy,<br> vibrancy, and camaraderie that make this event truly exceptional.
+        </p>
+        <br>
+        <h3 class="text-center p2"><b>Let's create unforgettable moments with <span id="name">#ThePlannerz</span></b> <span><a class="fancy" href="#">
+            <span class="top-key"></span>
+            <span class="text"><i class="fa-brands fa-instagram insta"></i>Follow us on Instagram</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+          </a></span> </h3>
+        </div>
+        <footer style="background-color: #fff6f2; color: #430a0a; background-image: url(https://media.istockphoto.com/id/1345222226/photo/champagne-beige-earth-color-gradient-background.jpg?s=612x612&w=0&k=20&c=QuWuOispyvPKDSsRiTHqEHq3f5tqn9SPbSj_U8JiZbg=); background-size: cover; padding: 3rem 0;">
+            <div class="container">
+                <!-- About Us Section -->
+                <div class="row mb-4">
+                    <div class="col-md-4 mb-4">
+                        <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>ABOUT US<span style="color: #ffbb00;">]</span></h6>
+                        <p style="line-height: 1.6; font-size: 14px; font-family: 'Clash Grotesk', sans-serif;">
+                            The Plannerz is a premier event management company located in Karachi, specializing in orchestrating a diverse range of events from professional business meetings and thrilling domestic tours to opulent weddings. As a versatile and comprehensive service provider, we excel in delivering extraordinary celebrations tailored to your every need.
+                        </p>
+                    </div>
+        
+                    <!-- Page Headings with Links -->
+                    <div class="col-md-4 mb-4">
+                        <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>PAGES<span style="color: #ffbb00;">]</span></h6>
+                        <div>
+                            <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Event Videos</a>
+                            <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Gallery</a>
+                            <a href="#" style="color: #000000; text-decoration: none; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Thematic Event</a>
+                        </div>
+                    </div>
+        
+                    <!-- Help Section with Links -->
+                    <div class="col-md-4 mb-4">
+                        <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>HELP<span style="color: #ffbb00;">]</span></h6>
+                        <div>
+                            <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Photography Packages</a>
+                            <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Blogs</a>
+                            <a href="#" style="color: #000000; text-decoration: none; font-family: 'Satoshi', sans-serif; font-weight: bold;">Food and Catering</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Social Media Links -->
+                <div class="text-center mb-4">
+                    <h4>Follow Us</h4>
+                    <a href="https://facebook.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://linkedin.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+        
+                <!-- Contact Information and Footer Bottom -->
+                <div class="text-center">
+                    <p style="margin-bottom: 1rem;">
+                        ThePlannerz Headquarters, 456 Celebration Avenue, Suite 200, Event City, EC 12345 | Email: info@theplannerz.com | Phone: +123 456 7890
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        © 2022, Company Inc. All rights reserved. @ The Plannerz Events
+                    </p>
+                    <div>
+                        <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
+                        <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Terms</a>
+                        <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Careers</a>
+                        <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline;">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+       
+    </div>
+    
+
+
+        
+
+
+        
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+            
+        </script>
+
+
+
+    </body>
+</html>

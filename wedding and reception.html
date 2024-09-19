@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePlannerz</title>
+    <link rel="icon" type="image/png" href="images/LOGO.png.png">
+        <!-- Required meta tags -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
+        integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,600&f[]=chillax@500&f[]=panchang@500&f[]=excon@900&f[]=quicksand@500&f[]=britney@400&f[]=nunito@400&f[]=melodrama@500&f[]=satoshi@400&f[]=rosaline@400&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    nav{
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://cdn.wallpapersafari.com/78/84/xGwRnc.jpg);
+ background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  
+  
+  
+
+}
+.a{
+  position: relative;
+  text-decoration:none;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #0e0000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding: 0 20px;
+  
+  
+}
+
+.a:after{
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.a:hover:after{
+  width: 100%;
+
+}
+.navbar {
+  transition: all 0.3s ease;
+  padding: 1px; /* Adjust as needed */
+}
+
+.navbar-shrink {
+  padding: 0.5rem; /* Adjust padding for the smaller size */
+}
+
+.navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+.navbar-shrink .navbar-brand img {
+  width: 150px; /* Adjust the width when the navbar shrinks */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.body1::selection{
+  background-color: #f00000;
+}
+.fix{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://img.freepik.com/premium-photo/intricate-floral-design-with-swirls-leaf-motifs-adorns-beige-background-providing-elegant-sophisticated-template-design-creativity_127746-8575.jpg?w=996);
+  background-attachment: fixed;
+ }
+ .dr{
+    font-size: 15px;
+    line-height: 22px;
+ }
+</style>
+<body class="body1">
+    <nav
+        class="navbar navbar-expand-sm navbar-light bg-dark sticky-top"
+       >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="" src="images/LOGO.png.png" width="150" height="75">
+              </a>
+            <button
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav md-auto mt-2 mx-lg-5">
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./index.html" aria-current="page"
+                            >HOME
+                            <span class="visually-hidden"></span></a
+                        >
+                    </li>
+                    <li class="nav-item a dropdown">
+                        <a
+                            class="nav-link text-white dropdown-toggle"
+                            href="#"
+                            id="dropdownId"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >OUR SERVICES</a
+                        >
+                        <div style="background-color:rgb(248, 248, 248);color: aliceblue;height: 170px;width: 200px;" dr
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownId"
+                        >
+                            <a class="dropdown-item dr" href="./wedding and reception.html"
+                                >WEDDING & RECEPTION</a
+                            >
+                            <a  class="dropdown-item dr" href="./birthday.html"
+                                >BIRTHDAY</a
+                            >
+                            <a class="dropdown-item dr" href="./bridal shower.html"
+                                >BRIDAL SHOWER</a
+                            >
+                            <a class="dropdown-item dr" href="./photograph.html"
+                                >PHOTOGRAPHY</a
+                            >
+                            <a  class="dropdown-item dr" href="./dholki.html"
+                                >PALKI & DOLI</a
+                            >
+                        </div>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       </nav>
+    <!-- HEADER-SECTION -->
+    <div class="home-header-section sub-header-section">
+        <!-- <figure class="banner-right-img left_icon img">
+            <img src="./assets/images/header-right-img.png" alt="" class="star">
+        </figure> -->
+        <div class="header-top header-top1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-md-block d-sm-none">
+                        <!-- <div class="header-left d-table-cell align-middle">
+                          <div class="phone-icon d-inline-block"><i class="fa-solid fa-phone-volume"></i></div><p class="free-consultation-text">For a free consultation:<a href="tel:+123456789" class="text-decoration-none">0800 123 45 67 890</a></p>
+                        </div> -->
+                    </div>
+                   <!--  <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="header-right float-md-right float-none">
+                            <ul class="list-unstyled">
+                                <li class="d-inline-block"><a class="d-inline-block email-span text-decoration-none"
+                                        href="mailto:info@sencare.com">Folllow us on:</a></li>
+                                <li class="d-inline-block user-li"><i class="fa-brands fa-facebook-f"></i></li>
+                                <li class="d-inline-block user-li"><i class="fa-brands fa-twitter"></i></li>
+                                <li class="d-inline-block user-li"><i class="fa-brands fa-pinterest-p"></i></li>
+                                <li class="d-inline-block user-li"><i class="fa-brands fa-instagram"></i></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+      <!--   <header class="header">
+            <div class="main-header">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg navbar-light p-0">
+                        <a class="navbar-brand pt-0" href="index.html"><img src="./assets/images/bridely-logo.png"
+                                alt="" class="img-fluid diverge-logo"></a>
+                        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text-decoration-none navbar-text-color home-margin-top"
+                                        href="index.html">Home<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-decoration-none navbar-text-color"
+                                        href="about.html">About</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link text-decoration-none navbar-text-color"
+                                        href="services.html">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-decoration-none navbar-text-color"
+                                        href="gallery.html">Gallery</a>
+                                </li>
+                                <li class="nav-item navbar-text-color"><a class="nav-link text-decoration-none contact-us-margin navbar-text-color" href="pricing.html">Pricing</a></li>
+                                <li class="nav-item dropdown redlight-dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                    <div class="dropdown-menu dropdown-content-redlight">
+                                        <ul class="list-unstyled">
+                                            <li class="nav-item"> <a class="dropdown-item nav-link"
+                                                    href="pricing.html">Pricing</a></li>
+                                            <li class="nav-item"> <a class="dropdown-item nav-link"
+                                                    href="single_gallery.html">Gallery Single</a></li>
+                                            <li class="nav-item"> <a class="dropdown-item nav-link"
+                                                    href="organizer.html">Event Organizer</a></li>        
+                                            <li class="nav-item"> <a class="dropdown-item nav-link"
+                                                    href="comming-soon.html">Comming soon</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn-talk ml-auto">
+                                <ul class="m-0 p-0">
+                                    <li class="list-unstyled d-lg-inline-block"><a class="nav-link contact"
+                                            href="contact.html">Order Services</a></li>
+                                    <li class="icon-search"><a href="" class="text-decoration-none play-button"><i
+                                                class="fa-solid fa-magnifying-glass"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header> -->
+        <!-- BANNER-SECTION -->
+
+          <!-- Event-Togrther-Section -->
+    <section class="event-section overflow-hidden position-relative event-section-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 order-lg-2 order-2">
+                    <div class="about-us-content aos-init aos-animate" data-aos="fade-up">
+                        <div class="cate-icon-outer">
+                            <figure class="cate-icon-img mb-0">
+                                <img style="border-radius: 30px;" height="200px" src="https://www.theknot.com/tk-media/images/73773556-3829-4a1e-9312-38286abfa490" alt="">
+                            </figure>
+                        </div>
+                        <h2>Let’s Plan Your Next Event Together
+                        </h2>
+                        <p class="aboutus-p aos-init aos-animate">Our wedding and reception will be a beautiful celebration of love and joy. Join us for an unforgettable evening of elegance and happiness as we unite in marriage and toast to our future together..</p>
+                        <div class="banner-btn discover-btn-banner">
+                            <a href="about.html" class="text-decoration-none">learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-5 col-md-5 col-sm-12 order-lg-1 order-1">
+                    <div class="event-content-img aos-init aos-animate">
+                       <ul class="list-unstyled mb-0">
+                        <li>
+                            <figure class="mb-0 icons-fig">
+                                <img src="./assets/images/event-img1.png" alt="">
+                            </figure>
+                            <h6>Entertaintment</h6>
+                        </li>
+                        <li>
+                            <figure class="mb-0 icons-fig">
+                                <img src="./assets/images/event-img2.png" alt="">
+                            </figure>
+                            <h6>Dining</h6>
+                        </li>
+                    </ul>
+                    <ul class="list-unstyled second mb-0">
+                        <li>
+                            <figure class="mb-0 icons-fig">
+                                <img src="./assets/images/event-img3.png" alt="">
+                            </figure>
+                            <h6>Decor</h6>
+                        </li>
+                        <li>
+                            <figure class="mb-0 icons-fig">
+                                <img src="./assets/images/event-img4.png" alt="">
+                            </figure>
+                            <h6>Swag & Gifting</h6>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+    <!-- Categories-SECTION -->
+    <section class="categories-section overflow-hidden position-relative">
+        <figure class="hearts-img">
+            <img src="" alt="" class="star">
+        </figure>
+        <figure class="design-img">
+            <img src="./assets/images/categories-img6.png" alt="" class="star">
+        </figure>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-lg-1 order-1">
+                    <div class="about-us-content" data-aos="fade-right">
+                        <div class="cate-icon-outer">
+                            <figure class="cate-icon-img mb-0">
+                                <img src="./assets/images/categories-logo-img.png" alt="">
+                            </figure>
+                        </div>
+                        <h2>Includes Various Product Categories
+                        </h2>
+                        <p class="aboutus-p">Our wedding and reception will be a beautiful celebration of love and joy. Join us for an unforgettable evening of elegance and happiness as we unite in marriage and toast to our future together.</p>
+                        <div class="banner-btn discover-btn-banner">
+                         
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-5 col-md-12 col-sm-12 order-lg-2 order-2">
+                    <div class="about-content-img aos-init aos-animate">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="card card1">
+                                    <figure class="mb-0 category-section-f2"><img style="border-radius: 20px;" height="250px" width="250px"
+                                            src="https://i.pinimg.com/564x/43/df/60/43df60eac1a588d1b538d39d8f7574f2.jpg" alt=""></figure>
+                                    <h6>Chairs</h6>
+                                </div>
+                                <div class="card card2">
+                                    <figure class="mb-0 category-section-f3"><img style="border-radius: 20px;" height="250px" width="250px"
+                                            src="https://i.pinimg.com/736x/50/63/2c/50632c9ea3c205461c9fb88b0a71a47e.jpg" alt=""></figure>
+                                    <h6>Wedding Walls</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="card card3">
+                                    <figure class="mb-0 category-section-f4"><img style="border-radius: 20px;" height="250px" width="250px"
+                                            src="https://i.pinimg.com/564x/ee/58/7f/ee587ff2032f081d9adbbbb9a2259dfb.jpg" alt=""></figure>
+                                    <h6>Catering</h6>
+                                </div>
+                                <div class="card card4">
+                                    <figure class="mb-0 category-section-f5"><img style="border-radius: 20px;" height="250px" width="250px"
+                                            src="https://i.pinimg.com/564x/6f/41/7f/6f417fdf6cd0389fd08f06d30bc997d6.jpg" alt=""></figure>
+                                    <h6>Metal Circles & Flowe.rs</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+         <!-- Video-SECTION -->
+    <section class="video-section  video-section-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="autorix-text"><span class="ityped">Introduction Video</span></h5>
+                    <h2>We Present</h2>
+                    <div class="video-section-conten" data-aos="fade-up">
+                        <figure class="mb-0 video-section-image">
+                            <img src="./assets/images/video-img.png" alt="" class="fluid-img">
+                        </figure>
+                        <a class="popup-vimeo"
+                            href="https://previews.customer.envatousercontent.com/h264-video-previews/5afc8770-eb05-42ec-b854-9fb6b3bb52c5/40068661.mp4">
+                            <figure class="mb-0 vide-play-img">
+                                <img src="./assets/images/video-play-icon.png" alt="" class="fluid-img">
+                            </figure>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer style="background-color: #fff6f2; color: #430a0a; background-image: url(https://media.istockphoto.com/id/1345222226/photo/champagne-beige-earth-color-gradient-background.jpg?s=612x612&w=0&k=20&c=QuWuOispyvPKDSsRiTHqEHq3f5tqn9SPbSj_U8JiZbg=); background-size: cover; padding: 3rem 0;">
+        <div class="container">
+            
+            <!-- About Us Section -->
+            <div class="row mb-4">
+                <div class="col-md-4 mb-4">
+                    <h6 style="letter-spacing: 6px; margin-bottom: 1rem;font-family: Arial, Helvetica, sans-serif;font-size: 15px;font-weight: 600;color: #430a0a;"><span style="color: #ffbb00;">[</span>ABOUT US<span style="color: #ffbb00;">]</span></h6>
+                    <p style="line-height: 1.6; font-size: 14px;font-family: Arial, Helvetica, sans-serif;">
+                        The Plannerz is a premier event management company located in Karachi, specializing in orchestrating a diverse range of events from professional business meetings and thrilling domestic tours to opulent weddings. As a versatile and comprehensive service provider, we excel in delivering extraordinary celebrations tailored to your every need.
+                    </p>
+                </div>
+    
+                <!-- Page Headings with Links -->
+                <div class="col-md-4 mb-4">
+                    <h6 style="letter-spacing: 6px; margin-bottom: 1rem;font-family: Arial, Helvetica, sans-serif;font-size: 15px;font-weight: 600;color: #430a0a;"><span style="color: #ffbb00;">[</span>PAGES<span style="color: #ffbb00;">]</span></h6>
+                    <div>
+                        <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Event Videos</a>
+                        <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Gallery</a>
+                        <a href="#" style="color: #000000; text-decoration: none; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Thematic Event</a>
+                    </div>
+                </div>
+    
+                <!-- Help Section with Links -->
+                <div class="col-md-4 mb-4">
+                    <h6 style="letter-spacing: 6px; margin-bottom: 1rem;font-family: Arial, Helvetica, sans-serif;font-size: 15px;font-weight: 600;color: #430a0a;"><span style="color: #ffbb00;">[</span>HELP<span style="color: #ffbb00;">]</span></h6>
+                    <div>
+                        <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Photography Packages</a>
+                        <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Blogs</a>
+                        <a href="#" style="color: #000000; text-decoration: none; font-family: 'Satoshi', sans-serif; font-weight: bold;">Food and Catering</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+    
+            <!-- Social Media Links -->
+            <div class="text-center mb-4">
+                <h4 style="font-size: 25px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Follow Us</h4>
+                <a href="https://facebook.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://linkedin.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+    
+            <!-- Contact Information and Footer Bottom -->
+            <div class="text-center">
+                <p style="margin-bottom: 1rem;">
+                    ThePlannerz Headquarters, 456 Celebration Avenue, Suite 200, Event City, EC 12345 | Email: info@theplannerz.com | Phone: +123 456 7890
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    © 2022, Company Inc. All rights reserved. @ The Plannerz Events
+                </p>
+                <div>
+                    <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
+                    <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Terms</a>
+                    <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Careers</a>
+                    <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline;">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/text-animations.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script src="https://unpkg.com/ityped@0.0.10"></script>
+    <script src="./assets/js/type.js"></script>
+    <script src="assets/js/custom-script.js"></script>
+    <script src="./assets/js/video-popup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>ThePlannerz</title>
+        <link rel="icon" type="image/png" href="images/LOGO.png.png">
+        <!-- Required meta tags -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,600&f[]=chillax@500&f[]=panchang@500&f[]=excon@900&f[]=quicksand@300,500&f[]=britney@400&f[]=nunito@400&f[]=melodrama@500&f[]=satoshi@400&f[]=rosaline@400&f[]=clash-grotesk@600&f[]=telma@500&f[]=neco@500&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        .cd {
+            height: auto;
+            width: 100%; /* Ensure full width on mobile */
+            font-family: 'Quicksand', sans-serif;
+        }
+        .h5 {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-family: 'Quicksand', sans-serif;
+            margin-bottom: 20px;
+        }
+        #name{
+    color: rgb(34, 123, 202);
+  }
+  .p2{
+    font-family: 'Clash Display', sans-serif;
+    font-size: 30px;
+    text-decoration: overline;
+    
+  }
+  .p3{
+    font-family: 'Clash Display', sans-serif;
+    font-size: 20px;
+  }
+        .fancy {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 11px;
+   }
+   
+   .fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+   }
+   
+   .fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+   }
+   .navbar {
+  transition: all 0.3s ease;
+  padding: 1px; /* Adjust as needed */
+}
+
+.navbar-shrink {
+  padding: 0.5rem; /* Adjust padding for the smaller size */
+}
+
+.navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+.navbar-shrink .navbar-brand img {
+  width: 150px; /* Adjust the width when the navbar shrinks */
+  height: auto; /* Maintain aspect ratio */
+}
+   .fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+   }
+   
+   .fancy:hover {
+    color: white;
+    background: black;
+   }
+   
+   .fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+   }
+   
+   .fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+   }
+   
+   .fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+   }
+   
+   .fancy:hover .bottom-key-1,
+    .fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+   }
+   .insta{
+    width: 20px;
+   }
+   .a1{
+    color: rgb(17, 8, 95);
+    text-decoration: overline;
+   }
+   .a1:hover{
+    font-size: 18px;
+    transition: 0.5s;
+   }
+   .row1{
+    background-image: url(https://image.slidesdocs.com/responsive-images/background/nature-flowers-abstract-plant-red-flower-powerpoint-background_2a53c56f20__960_540.jpg);
+    height: auto;
+    width: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   .bg{
+    background: transparent;
+    backdrop-filter: blur(50px);
+   }
+   nav{
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://cdn.wallpapersafari.com/78/84/xGwRnc.jpg);
+ background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  
+  
+  
+
+}
+.a{
+  position: relative;
+  text-decoration:none;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  color: #0e0000;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding: 0 20px;
+  
+  
+}
+
+.a:after{
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.a:hover:after{
+  width: 100%;
+
+}
+.head{
+    font-family: 'Chillax', sans-serif;
+    font-weight: bold;
+}
+
+    </style>
+
+    <body>
+        <nav
+        class="navbar navbar-expand-sm navbar-light bg-dark sticky-top"
+       >
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="" src="images/LOGO.png.png" width="150" height="75">
+              </a>
+            <button
+                class="navbar-toggler d-lg-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav md-auto mt-2 mx-lg-5">
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./index.html" aria-current="page"
+                            >HOME
+                            <span class="visually-hidden">(current)</span></a
+                        >
+                    </li>
+                    <li class="nav-item a dropdown">
+                        <a
+                            class="nav-link text-white dropdown-toggle"
+                            href="#"
+                            id="dropdownId"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >OUR SERVICES</a
+                        >
+                        <div style="background-color: #f8f8f8;color: aliceblue;"
+                            class="dropdown-menu"
+                            aria-labelledby="dropdownId"
+                        >
+                            <a class="dropdown-item" href="./wedding and reception.html"
+                                >WEDDING & RECEPTION</a
+                            >
+                            <a  class="dropdown-item" href="./birthday.html"
+                                >BIRTHDAY</a
+                            >
+                            <a class="dropdown-item" href="./bridal shower.html"
+                                >BRIDAL SHOWER</a
+                            >
+                            <a class="dropdown-item" href="./photograph.html"
+                                >PHOTOGRAPHY</a
+                            >
+                            <a  class="dropdown-item" href="./dholki.html"
+                                >PALKI & DOLI</a
+                            >
+                        </div>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./gallery.html">GALLERY</a>
+                    </li>
+                    <li class="nav-item a">
+                        <a class="nav-link text-white" href="./contact.html">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       </nav>
+        <div class="row1 ">
+        <h1 style="font-family: 'Clash Grotesk', sans-serif;" class="text-center">PHOTOGRAPHY DEALS</h1>
+        <br>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-12 col-md-6 col-lg-3 mb-4 ">
+                    <div class="card cd bg">
+                        <div class="card-body bg-transparent">
+                            <h4 class="card-title text-center head">Nikkah Day Special</h4>
+                            <hr>
+                            <h5 class="text-center h5">Photographer</h5>
+                            <h5 class="text-center h5">Videographer</h5>
+                            <h5 class="text-center h5">Nikkah Candid</h5>
+                            <h5 class="text-center h5">Couple Session</h5>
+                            <h5 class="text-center h5">Unlimited Pictures</h5>
+                            <h5 class="text-center h5">Highlight Video</h5>
+                            <h5 class="text-center h5">50 Edits</h5>
+                            <h5 class="text-center h5">Full-Length Film</h5>
+                            <br>
+                            <h2 style="font-family: 'Chillax', sans-serif;font-weight:bolder;" class="text-center">PKR 50,000</h2>
+                            <br>
+                            <a class="a1" href=""><p class="text-center">Book Your Session</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4 ">
+                    <div class="card cd bg">
+                        <div class="card-body bg-transparent">
+                            <h4 class="card-title text-center head">Bronze Event Package
+                            </h4>
+                            <hr>
+                            <h5 class="text-center h5">1 PHOTOGRAPHER</h5>
+                            <h5 class="text-center h5">1 VIDEOGRAPHER</h5>
+                            <h5 class="text-center h5">UNLIMITED PICTURES</h5>
+                            <h5 class="text-center h5">CINEMATIC HIGHLIGHTS VIDEO</h5>
+                            <h5 class="text-center h5">CINEMATIC FULL LENGTH VIDEO</h5>
+                            <h5 class="text-center h5">1 DIGITALLY PRINTED ALBUM</h5>
+                            <br>
+                            <h2 style="font-family: 'Chillax', sans-serif;font-weight:bolder;" class="text-center">PKR 80,000</h2>
+                            <br>
+                            <a class="a1" href=""><p class="text-center">Book Your Session</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4 ">
+                    <div class="card cd bg">
+                        <div class="card-body bg-transparent">
+                            <h4 class="card-title text-center head">SILVER PACKAGE ONE DAY</h4>
+                            <hr>
+                            <h5 class="text-center h5">2 PHOTOGRAPHERS</h5>
+                            <h5 class="text-center h5">2 VIDEOGRAPHERS</h5>
+                            <h5 class="text-center h5">UNLIMITED PICTURES</h5>
+                            <h5 class="text-center h5">CINEMATIC HIGHLIGHTS VIDEO</h5>
+                            <h5 class="text-center h5">CINEMATIC FULL LENGTH VIDEO</h5>
+                            <h5 class="text-center h5">1 DIGITALLY PRINTED ALBUM</h>
+                            <br>
+                            <h2 style="font-family: 'Chillax', sans-serif;font-weight:bolder;" class="text-center">PKR 125,000</h2>
+                            <br>
+                            <a class="a1" href=""><p class="text-center">Book Your Session</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-4 ">
+                    <div class="card cd bg">
+                        <div class="card-body bg-transparent">
+                            <h4 class="card-title text-center head">One-Day Gold Plan</h4>
+                            <hr>
+                            <h5 class="text-center h6">2 Photographer</h5>
+                            <h5 class="text-center h6">2 Videographer</h5>
+                            <h5 class="text-center h6">CINEMATIC HIGHLIGHTS VIDEO</h5>
+                            <h5 class="text-center h6">CINEMATIC FULL LENGTH VIDEO</h5>
+                            <h5 class="text-center h6">Unlimited Pictures</h5>
+                            <h5 class="text-center h6">DRONE</h5>
+                            <h5 class="text-center h6">INTERVIEW SESSION OF COUPLE</h5>
+                            <h5 class="text-center h6">INTERVIEW SESSION OF FAMILY MEMBERS</h5>
+                            <h5 class="text-center h6">GETTING READY SESSION OF BRIDE</h5>
+                            <br>
+                            <h2 style="font-family: 'Chillax', sans-serif;font-weight:bolder;" class="text-center">PKR 180,000</h2>
+                            <br>
+                            <a class="a1" href=""><p class="text-center">Book Your Session</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+        <h5 class="text-center p3"><b>Let's create unforgettable moments with <span id="name">#ThePlannerz</span></b> <span><a class="fancy" href="#">
+            <span class="top-key"></span>
+            <span class="text"><i class="fa-brands fa-instagram insta"></i>Follow us on Instagram</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+          </a></span> </h5><br>
+          <footer style="background-color: #fff6f2; color: #430a0a; background-image: url(https://media.istockphoto.com/id/1345222226/photo/champagne-beige-earth-color-gradient-background.jpg?s=612x612&w=0&k=20&c=QuWuOispyvPKDSsRiTHqEHq3f5tqn9SPbSj_U8JiZbg=); background-size: cover; padding: 3rem 0;">
+            <div class="container">
+                <!-- About Us Section -->
+                <div class="row mb-4">
+                    <div class="col-md-4 mb-4">
+                        <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>ABOUT US<span style="color: #ffbb00;">]</span></h6>
+                        <p style="line-height: 1.6; font-size: 14px; font-family: 'Clash Grotesk', sans-serif;">
+                            The Plannerz is a premier event management company located in Karachi, specializing in orchestrating a diverse range of events from professional business meetings and thrilling domestic tours to opulent weddings. As a versatile and comprehensive service provider, we excel in delivering extraordinary celebrations tailored to your every need.
+                        </p>
+                    </div>
+        
+                    <!-- Page Headings with Links -->
+                    <div class="col-md-4 mb-4">
+                        <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>PAGES<span style="color: #ffbb00;">]</span></h6>
+                        <div>
+                            <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Event Videos</a>
+                            <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Gallery</a>
+                            <a href="#" style="color: #000000; text-decoration: none; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Thematic Event</a>
+                        </div>
+                    </div>
+        
+                    <!-- Help Section with Links -->
+                    <div class="col-md-4 mb-4">
+                        <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>HELP<span style="color: #ffbb00;">]</span></h6>
+                        <div>
+                            <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Photography Packages</a>
+                            <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Blogs</a>
+                            <a href="#" style="color: #000000; text-decoration: none; font-family: 'Satoshi', sans-serif; font-weight: bold;">Food and Catering</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Social Media Links -->
+                <div class="text-center mb-4">
+                    <h4>Follow Us</h4>
+                    <a href="https://facebook.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://linkedin.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+        
+                <!-- Contact Information and Footer Bottom -->
+                <div class="text-center">
+                    <p style="margin-bottom: 1rem;">
+                        ThePlannerz Headquarters, 456 Celebration Avenue, Suite 200, Event City, EC 12345 | Email: info@theplannerz.com | Phone: +123 456 7890
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        © 2022, Company Inc. All rights reserved. @ The Plannerz Events
+                    </p>
+                    <div>
+                        <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
+                        <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Terms</a>
+                        <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Careers</a>
+                        <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline;">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+       
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
