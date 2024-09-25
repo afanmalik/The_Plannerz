@@ -111,7 +111,69 @@
     font-size: 15px;
     line-height: 22px;
  }
- 
+ .about-content-img figure {
+    display: flex; /* Align images in a row */
+    justify-content: center; /* Center images in the container */
+}
+
+/* Default styles for larger screens */
+.about-section-f1 img {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+}
+
+.about-section-f2 img {
+    height: 250px; /* Adjust size as needed */
+    width: auto;
+}
+
+.about-section-f3 img {
+    height: 200px; /* Adjust size as needed */
+    width: auto;
+}
+
+.about-section-f4 img {
+    height: 100px; /* Adjust size as needed */
+    width: auto;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .about-section-f1 img {
+        height: 30px; /* Smaller height for mobile */
+    }
+
+    .about-section-f2 img {
+        height: 200px; /* Smaller height for mobile */
+    }
+
+    .about-section-f3 img {
+        height: 150px; /* Smaller height for mobile */
+    }
+
+    .about-section-f4 img {
+        height: 80px; /* Smaller height for mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section-f1 img {
+        height: 25px; /* Further adjustment for very small screens */
+    }
+
+    .about-section-f2 img {
+        height: 180px; /* Further adjustment for very small screens */
+    }
+
+    .about-section-f3 img {
+        height: 130px; /* Further adjustment for very small screens */
+    }
+
+    .about-section-f4 img {
+        height: 70px; /* Further adjustment for very small screens */
+    }
+}
+
 </style>
 <body class="body1">
     <nav
@@ -263,8 +325,8 @@
 
                             <div class="banner-img-content position-relative">
                                 <figure class="banner-img mb-0">
-                                    <img style="height: 600px;border-radius: 40px 0 40px 0;" class="img-fluid banner-img-width"
-                                        src="https://i.pinimg.com/736x/72/1d/3d/721d3db8e7fb542cca0a96b6c59e4ef4.jpg" alt="">
+                                    <img style="height: 600px;border-radius: 40px 0 40px 0;border: 2px solid black;" class="img-fluid banner-img-width"
+                                        src="https://img.freepik.com/premium-photo/bedroom-bright-colors_114309-1024.jpg?ga=GA1.2.1986559833.1727210465&semt=ais_hybrid" alt="">
                                 </figure>
                             </div>
                         </div>
@@ -278,7 +340,7 @@
                                     Lorem ipsum dolor sit amet consectetur adipiscing elit sed doeiusm tempor incididunt
                                 </p>
                                 <div class="banner-btn discover-btn-banner">
-                                    <a href="#" class="text-decoration-none"><i
+                                    <a href="contact.html" class="text-decoration-none"><i
                                             class="fa fa-clipboard-list"></i>Make Reservations</a>
                                 </div>
                             </div>
@@ -307,11 +369,11 @@
                         <div class="about-content-img">
                             <figure class="mb-0 about-section-f1"><img src="./assets/images/about-bird-icon.png" alt="" class="star">
                             </figure>
-                            <figure class="mb-0 about-section-f2"><img style="height: 250px; width: 300px;border-radius: 30px 0 30px 0;" src="https://i.pinimg.com/564x/64/ac/80/64ac80d9f8963165acac9e7ffabab01e.jpg" alt="">
+                            <figure class="mb-0 about-section-f2 "><img style="height: 250px; width: auto;border-radius: 30px 0 30px 0;" src="https://img.freepik.com/free-photo/chocolate-basket-gift-table_140725-8220.jpg?ga=GA1.2.1986559833.1727210465&semt=ais_hybrid" alt="">
                             </figure>
-                            <figure class="mb-0 about-section-f3"><img style="height: 200px; width: 250px ; border-radius: 30px 0 30px 0;"src="https://i.pinimg.com/564x/e9/c2/69/e9c26912f020e28f911bf9cbd2aa08d5.jpg" alt="">
+                            <figure class="mb-0 about-section-f3 "><img style="height: 200px; width: auto ; border-radius: 30px 0 30px 0;"src="https://img.freepik.com/premium-photo/image-diwali-celebration-with-many-items_1127442-1651.jpg?ga=GA1.2.1986559833.1727210465&semt=ais_hybrid" alt="">
                             </figure>
-                            <figure class="mb-0 about-section-f4"><img style="height: 95px; width: 255px ; border-radius: 30px 0 30px 0;" src="https://i.pinimg.com/564x/06/72/49/067249dddb5599022b5cc533b4855cdb.jpg" alt="">
+                            <figure class="mb-0 about-section-f4"><img style="height: 100px; width: auto ; border-radius: 30px 0 30px 0;" src="https://img.freepik.com/free-photo/navratri-highly-detailed-floral-decoration_23-2151193748.jpg?t=st=1727294776~exp=1727298376~hmac=9a57e6c73c66b264ca458734817b075550de5bfdde36ec8b1eea68108607e25e&w=900" alt="">
                             </figure>
                         </div>
                     </div>
@@ -321,26 +383,30 @@
         </div>
     </div>
     <!-- Video-SECTION -->
-    <div class="video-section">
+    <section class="video-section video-section-services">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="video-section-conten" data-aos="fade-up">
-                        <figure class="mb-0 video-section-image">
-                            <img src="./assets/images/video-img.png" alt="" class="fluid-img">
+                    <h5 class="autorix-text"><span class="ityped">Introduction Video</span></h5>
+                    <h2>We Present</h2>
+                    <div class="video-section-content" data-aos="fade-up" style="position: relative;">
+                        <figure class="mb-0 video-section-image" style="position: relative;">
+                            <!-- Poster image will show before the video is played -->
+                            <video id="introVideo" class="fluid-img" controls 
+                                style="width: 100%; height: auto;">
+                                <source src="https://previews.customer.envatousercontent.com/h264-video-previews/5afc8770-eb05-42ec-b854-9fb6b3bb52c5/40068661.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- Custom play button -->
+                            <div class="play-button-overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;">
+                            </div>
                         </figure>
-                        <a class="popup-vimeo"
-                            href="https://previews.customer.envatousercontent.com/h264-video-previews/5afc8770-eb05-42ec-b854-9fb6b3bb52c5/40068661.mp4">
-                            <figure class="mb-0 vide-play-img">
-                                <img src="./assets/images/video-play-icon.png" alt="" class="fluid-img">
-                            </figure>
-                        </a>
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    
     <!-- Categories-SECTION -->
     
     <!--make-reservation-section -->
@@ -372,7 +438,7 @@
             </div>
 
             <div class="banner-btn discover-btn-banner">
-                <a href="#" class="text-decoration-none">Make Reservations</a>
+                <a href="contact.html" class="text-decoration-none">Make Reservations</a>
             </div>
         </div>
     </div>
@@ -443,72 +509,74 @@
 <!-- Icons-Section -->
 
 <!-- Instagram-feed-section -->
-<footer style="background-color: #fff6f2; color: #430a0a; background-image: url(https://media.istockphoto.com/id/1345222226/photo/champagne-beige-earth-color-gradient-background.jpg?s=612x612&w=0&k=20&c=QuWuOispyvPKDSsRiTHqEHq3f5tqn9SPbSj_U8JiZbg=); background-size: cover; padding: 3rem 0;">
-    <div class="container">
-        <!-- About Us Section -->
-        <div class="row mb-4">
-            <div class="col-md-4 mb-4">
-                <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;font-family: Arial, Helvetica, sans-serif;font-size: 15px;font-weight: 600;color: #430a0a;">[</span>ABOUT US<span style="color: #ffbb00;">]</span></h6>
-                <p style="line-height: 1.6; font-size: 14px; font-family: 'Clash Grotesk', sans-serif;">
-                    The Plannerz is a premier event management company located in Karachi, specializing in orchestrating a diverse range of events from professional business meetings and thrilling domestic tours to opulent weddings. As a versatile and comprehensive service provider, we excel in delivering extraordinary celebrations tailored to your every need.
+<footer style=" background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://cdn.wallpapersafari.com/78/84/xGwRnc.jpg);
+            background-size: cover; padding: 5rem 0; color: #ffffff;">
+            <div class="container">
+              <!-- About Us, Pages, and Help Sections -->
+              <div class="row mb-5 text-center text-md-left">
+                <!-- About Us Section -->
+                <div class="col-md-4 mb-4">
+                  <h6 style="letter-spacing: 4px; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold; color: #F69643;">ABOUT US</h6>
+                  <p style="line-height: 1.8; font-size: 15px; color: #cccccc;">
+                    The Plannerz is a premier event management company located in Karachi, specializing in orchestrating events from professional meetings to opulent weddings, ensuring extraordinary celebrations tailored to your needs.
+                  </p>
+                </div>
+          
+                <!-- Pages Section -->
+                <div class="col-md-4 mb-4">
+                  <h6 style="letter-spacing: 4px; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold; color: #F69643;">PAGES</h6>
+                  <div>
+                    <a href="wedding and reception.html" style="color: #cccccc; text-decoration: none; display: block; margin-bottom: 1rem; font-size: 16px; font-weight: bold;">Event Videos</a>
+                    <a href="gallery.html" style="color: #cccccc; text-decoration: none; display: block; margin-bottom: 1rem; font-size: 16px; font-weight: bold;">Gallery</a>
+                    <a href="birthday.html" style="color: #cccccc; text-decoration: none; font-size: 16px; font-weight: bold;">Birthday Event</a>
+                  </div>
+                </div>
+          
+                <!-- Help Section -->
+                <div class="col-md-4 mb-4">
+                  <h6 style="letter-spacing: 4px; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold; color: #F69643;">HELP</h6>
+                  <div>
+                    <a href="photograph.html" style="color: #cccccc; text-decoration: none; display: block; margin-bottom: 1rem; font-size: 16px; font-weight: bold;">Photography Packages</a>
+                    <a href="contact.html" style="color: #cccccc; text-decoration: none; display: block; margin-bottom: 1rem; font-size: 16px; font-weight: bold;">Contact us</a>
+                    <a href="menu.html" style="color: #cccccc; text-decoration: none; font-size: 16px; font-weight: bold;">Menu</a>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Social Media Links -->
+              <div class="text-center mb-5">
+                <h4 style="font-size: 24px; font-family: 'Roboto', sans-serif; color: #ffffff; margin-bottom: 2rem;">Follow Us</h4>
+                <a href="https://facebook.com" style="color: #fdfdfd; margin-right: 1rem; font-size: 22px;" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" style="color: #f8f7f3; margin-right: 1rem; font-size: 22px;" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com" style="color: #ffffff; margin-right: 1rem; font-size: 22px;" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://linkedin.com" style="color: #fffdf3; margin-right: 1rem; font-size: 22px;" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+          
+              <!-- Contact Information and Footer Bottom -->
+              <div class="text-center">
+                <p style="margin-bottom: 1rem; color: #cccccc;">
+                  ThePlannerz Headquarters, 456 Celebration Avenue, Event City | Email: info@theplannerz.com | Phone: +123 456 7890
                 </p>
-            </div>
-
-            <!-- Page Headings with Links -->
-            <div class="col-md-4 mb-4">
-                <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;font-family: Arial, Helvetica, sans-serif;font-size: 15px;font-weight: 600;color: #430a0a;">[</span>PAGES<span style="color: #ffbb00;">]</span></h6>
+                <p style="margin-bottom: 1rem; color: #cccccc;">
+                  © 2024, Company Inc. All rights reserved. @ The Plannerz Events
+                </p>
                 <div>
-                    <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Event Videos</a>
-                    <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Gallery</a>
-                    <a href="#" style="color: #000000; text-decoration: none; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Thematic Event</a>
+                  <a href="#" style="color: #F69643; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
+                  <a href="#" style="color: #F69643; text-decoration: underline; margin-right: 1rem;">Terms</a>
+                  <a href="#" style="color: #F69643; text-decoration: underline; margin-right: 1rem;">Careers</a>
+                  <a href="#" style="color: #F69643; text-decoration: underline;">Sitemap</a>
                 </div>
+              </div>
             </div>
-
-            <!-- Help Section with Links -->
-            <div class="col-md-4 mb-4">
-                <h6 style="letter-spacing: 6px; margin-bottom: 1rem;font-family: Arial, Helvetica, sans-serif;font-size: 15px;font-weight: 600;color: #430a0a;"><span style="color: #ffbb00;">[</span>HELP<span style="color: #ffbb00;">]</span></h6>
-                <div>
-                    <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Photography Packages</a>
-                    <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Blogs</a>
-                    <a href="#" style="color: #000000; text-decoration: none; font-family: 'Satoshi', sans-serif; font-weight: bold;">Food and Catering</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Social Media Links -->
-        <div class="text-center mb-4">
-            <h4 style="font-size: 25px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Follow Us</h4>
-            <a href="https://facebook.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://instagram.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://youtube.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-            <a href="https://linkedin.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-        </div>
-
-        <!-- Contact Information and Footer Bottom -->
-        <div class="text-center">
-            <p style="margin-bottom: 1rem;">
-                ThePlannerz Headquarters, 456 Celebration Avenue, Suite 200, Event City, EC 12345 | Email: info@theplannerz.com | Phone: +123 456 7890
-            </p>
-            <p style="margin-bottom: 1rem;">
-                © 2022, Company Inc. All rights reserved. @ The Plannerz Events
-            </p>
-            <div>
-                <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
-                <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Terms</a>
-                <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Careers</a>
-                <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline;">Sitemap</a>
-            </div>
-        </div>
-    </div>
-</footer>
+          </footer>
 
 
     <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>

@@ -30,6 +30,75 @@
                     margin-right: 0;
                 }
             }
+      .blur {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.hall {
+    width: 100%; /* Makes the image take full width */
+    height: auto; /* Automatically adjusts height to maintain aspect ratio */
+    max-height: 250px; /* Keeps a max height for uniformity */
+    object-fit: cover; /* Ensures the image fills its container without stretching */
+    border-radius: 10px;
+}
+
+.blur {
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.hall {
+    width: 100% !important; /* Force the image to take the full width of its container */
+    height: auto !important; /* Ensure the height adjusts automatically */
+    object-fit: cover; /* Fill the container without distortion */
+    border-radius: 10px;
+}
+
+/* Add media query for mobile screens */
+@media (max-width: 768px) {
+    .hall {
+        width: 100% !important; /* Make sure image takes full width on mobile */
+        max-height: 250px !important; /* Ensure max height for images on mobile */
+    }
+}
+
+.tag {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.owl-carousel .item {
+    padding: 15px;
+    transition: transform 0.3s;
+    box-sizing: border-box; /* Ensure padding does not overflow the item */
+}
+
+.owl-carousel .item img {
+    width: 100% !important; /* Ensure image takes up the full width of the carousel item */
+    height: auto !important; /* Ensure the image adjusts properly on all screen sizes */
+}
+
+.owl-carousel .item:hover {
+    transform: scale(1.05);
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carousel-controls .btn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+
         </style>
     </head>
 
@@ -186,17 +255,17 @@
             <br>
             <br>
             <div class="container-fluid blur">
-                <h1 class="line">Find Best Photographer In Pakistan</h1>
+                <h1 class="line text-center mb-4">Find Best Photographer In Pakistan</h1>
             <div class="owl-carousel owl-theme">
                 <br>
                 <br>
 
-                <div class="item"><div><img class="photo" height="270px" src="https://th.bing.com/th/id/OIP.re4P-yfn5vaC99pIbnc2QgHaJP?w=900&h=1124&rs=1&pid=ImgDetMain" alt=""></div><h4 class="tag">Shahzad Photography</h4><div></div></div>
-                <div class="item"><div><img class="photo" height="270px" src="https://i.pinimg.com/originals/ba/c6/63/bac663f563673414c4e81b619a8cd7a3.jpg" alt=""></div><h4 class="tag">Imran Imagery</h4><div></div></div>
-                <div class="item"><div><img class="photo" height="270px" src="https://th.bing.com/th/id/OIP.TFDB2pZpZZ_IwCDrlGm_UAHaLI?w=1300&h=1954&rs=1&pid=ImgDetMain" alt=""></div><h4 class="tag">Rehman Studios</h4><div></div></div>
-                <div class="item"><div><img class="photo" height="270px" src="https://www.weddingsutra.com/images/karina-ishaan-thumb.jpg" alt=""></div><h4 class="tag">Javed Studio</h4><div></div></div>
-                <div class="item"><div><img class="photo" height="270px" src="https://reviewit.pk/wp-content/uploads/2021/12/Madiha-Khan-1-819x1024.jpg" alt=""></div><h4 class="tag">Zubair Clicks</h4><div></div></div>
-                <div class="item"><div><img class="photo" height="270px" src="https://images.shaadisaga.com/shaadisaga_production/photos/pictures/000/697/267/new_thumb/2.jpg?1549436745" alt=""></div><h4 class="tag">Khan Lens</h4><div></div></div>
+                <div class="item"><div><img class="hall" height="270px" src="https://th.bing.com/th/id/OIP.re4P-yfn5vaC99pIbnc2QgHaJP?w=900&h=1124&rs=1&pid=ImgDetMain" alt=""></div><h4 class="tag">Shahzad Photography</h4><div></div></div>
+                <div class="item"><div><img class="hall" height="270px" src="https://i.pinimg.com/originals/ba/c6/63/bac663f563673414c4e81b619a8cd7a3.jpg" alt=""></div><h4 class="tag">Imran Imagery</h4><div></div></div>
+                <div class="item"><div><img class="hall" height="270px" src="https://th.bing.com/th/id/OIP.TFDB2pZpZZ_IwCDrlGm_UAHaLI?w=1300&h=1954&rs=1&pid=ImgDetMain" alt=""></div><h4 class="tag">Rehman Studios</h4><div></div></div>
+                <div class="item"><div><img class="hall" height="270px" src="https://www.weddingsutra.com/images/karina-ishaan-thumb.jpg" alt=""></div><h4 class="tag">Javed Studio</h4><div></div></div>
+                <div class="item"><div><img class="hall" height="270px" src="https://reviewit.pk/wp-content/uploads/2021/12/Madiha-Khan-1-819x1024.jpg" alt=""></div><h4 class="tag">Zubair Clicks</h4><div></div></div>
+                <div class="item"><div><img class="hall" height="270px" src="https://images.shaadisaga.com/shaadisaga_production/photos/pictures/000/697/267/new_thumb/2.jpg?1549436745" alt=""></div><h4 class="tag">Khan Lens</h4><div></div></div>
                 
             </div>
         </div>
@@ -204,7 +273,7 @@
         <br>
         <br>
         <div class="container-fluid blur">
-            <h1 class="line">Find Best Marriage Hall And Marquees In Pakistan</h1>
+            <h1 class="line text-center mb-4">Find Best Marriage Hall And Marquees In Pakistan</h1>
             <div class="owl-carousel owl-theme ">
                 <div class="item"><div><img class="hall" src="https://th.bing.com/th/id/R.852151792eac4c5fb2b0c0bfe3319a18?rik=RGFKGjxL4TsWrA&riu=http%3a%2f%2fwww.venuebazaar.pk%2fAdmin%2fGallery_Hall%2f91%2f2-min.jpg&ehk=QU3K5XrB4AzatdpxD0SVmozPetQ4OYLPK4hO7JA0YaA%3d&risl=&pid=ImgRaw&r=0" alt=""></div><h4 class="tag">The Ritz Banqueet</h4><div></div></div>
                 <div class="item"><div><img class="hall" height="270px" src="https://rentkea.com/thisisthedirectory/uploads/2022/12/The-Grand-Marquee-Rentkea-Karachi-1.jpg" alt=""></div><h4 class="tag">The Grand Marquee</h4><div></div></div>
@@ -219,7 +288,7 @@
         <br>
         <br>
         <div class="container-fluid blur">
-            <h1 class="line">Find Best Catering In Pakistan</h1>
+            <h1 class="line text-center mb-4">Find Best Catering In Pakistan</h1>
             <div class="owl-carousel owl-theme ">
                 <div class="item"><div><img class="hall" src="https://venuehub.pk/wp-content/uploads/outdoor-catering.jpg" alt=""></div><h4 class="tag">Royal Feast Catering</h4><div></div></div>
                 <div class="item"><div><img class="hall" height="270px" src="https://images.luxuryescapes.com/lux-group/image/upload/f_auto,fl_progressive,q_auto:best/tafy85tytruxknzcdebw" alt=""></div><h4 class="tag">PakCuisine Caterers</h4><div></div></div>
@@ -234,20 +303,41 @@
         <br>
         <br>
         <div class="container-fluid blur">
-            <h1 class="line">Find Best Decor In Pakistan</h1>
+            <h1 class="line text-center mb-4">Find Best Decor In Pakistan</h1>
             
-            <div class="owl-carousel owl-theme ">
-                <div class="item"><div><img class="hall" src="https://th.bing.com/th/id/OIP.CCV27Xt0q-XRP1ubpFlkigHaJI?rs=1&pid=ImgDetMain" alt=""></div><h4 class="tag">Wedding Decoration</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://th.bing.com/th/id/OIP.YRx5jQrcJizghUGl6mDW9gAAAA?w=400&h=284&rs=1&pid=ImgDetMain" alt=""></div><h4 class="tag">Wedding Decoration</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://5.imimg.com/data5/CU/QG/JQ/ANDROID-16463600/product-jpeg-500x500.jpg" alt=""></div><h4 class="tag">Birthday Events</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://th.bing.com/th/id/OIP.GVz0phAlf_ADvRv0xywPYAAAAA?w=400&h=500&rs=1&pid=ImgDetMain" alt=""></div><h4 class="tag">Birthday Events</h4><div></div></div>
-                <div class="item"><div><img class="hall" src="https://th.bing.com/th/id/OIP.TFZwzLpeh-2hwkAfWxrwHAAAAA?w=474&h=315&rs=1&pid=ImgDetMain" alt=""></div><h4 class="tag">Corporate Events</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://www.cateringbyseasons.com/wp-content/uploads/2015/03/Game-Night-Bar-Mitzvah-Catering-by-Seasons-1-of-1.jpg" alt=""></div><h4 class="tag">Corporate Events</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://i.pinimg.com/736x/f9/d3/31/f9d3317174c8257373340ddeca4c846a.jpg" alt=""></div><h4 class="tag">Musical Events</h4><div></div></div>
-                
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div><img class="hall" src="https://th.bing.com/th/id/OIP.CCV27Xt0q-XRP1ubpFlkigHaJI?rs=1&pid=ImgDetMain" alt=""></div>
+                    <h4 class="tag">Wedding Decoration</h4>
+                </div>
+                <div class="item">
+                    <div><img class="hall" src="https://th.bing.com/th/id/OIP.YRx5jQrcJizghUGl6mDW9gAAAA?w=400&h=284&rs=1&pid=ImgDetMain" alt=""></div>
+                    <h4 class="tag">Wedding Decoration</h4>
+                </div>
+                <div class="item">
+                    <div><img class="hall" src="https://5.imimg.com/data5/CU/QG/JQ/ANDROID-16463600/product-jpeg-500x500.jpg" alt=""></div>
+                    <h4 class="tag">Birthday Events</h4>
+                </div>
+                <div class="item">
+                    <div><img class="hall" src="https://th.bing.com/th/id/OIP.GVz0phAlf_ADvRv0xywPYAAAAA?w=400&h=500&rs=1&pid=ImgDetMain" alt=""></div>
+                    <h4 class="tag">Birthday Events</h4>
+                </div>
+                <div class="item">
+                    <div><img class="hall" src="https://th.bing.com/th/id/OIP.TFZwzLpeh-2hwkAfWxrwHAAAAA?w=474&h=315&rs=1&pid=ImgDetMain" alt=""></div>
+                    <h4 class="tag">Corporate Events</h4>
+                </div>
+                <div class="item">
+                    <div><img class="hall" src="https://www.cateringbyseasons.com/wp-content/uploads/2015/03/Game-Night-Bar-Mitzvah-Catering-by-Seasons-1-of-1.jpg" alt=""></div>
+                    <h4 class="tag">Corporate Events</h4>
+                </div>
+                <div class="item">
+                    <div><img class="hall" src="https://i.pinimg.com/736x/f9/d3/31/f9d3317174c8257373340ddeca4c846a.jpg" alt=""></div>
+                    <h4 class="tag">Musical Events</h4>
+                </div>
             </div>
+        
+            
         </div>
-        <br>
         <br>
         <br>
         <div class="div">
@@ -308,72 +398,75 @@
         <br>
         <br>
 
-    <footer style="background-color: #fff6f2; color: #430a0a; background-image: url(https://media.istockphoto.com/id/1345222226/photo/champagne-beige-earth-color-gradient-background.jpg?s=612x612&w=0&k=20&c=QuWuOispyvPKDSsRiTHqEHq3f5tqn9SPbSj_U8JiZbg=); background-size: cover; padding: 3rem 0;">
-        <div class="container">
-            <!-- About Us Section -->
-            <div class="row mb-4">
+        <footer style=" background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(https://cdn.wallpapersafari.com/78/84/xGwRnc.jpg);
+            background-size: cover; padding: 5rem 0; color: #ffffff;">
+            <div class="container">
+              <!-- About Us, Pages, and Help Sections -->
+              <div class="row mb-5 text-center text-md-left">
+                <!-- About Us Section -->
                 <div class="col-md-4 mb-4">
-                    <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>ABOUT US<span style="color: #ffbb00;">]</span></h6>
-                    <p style="line-height: 1.6; font-size: 14px; font-family: 'Clash Grotesk', sans-serif;">
-                        The Plannerz is a premier event management company located in Karachi, specializing in orchestrating a diverse range of events from professional business meetings and thrilling domestic tours to opulent weddings. As a versatile and comprehensive service provider, we excel in delivering extraordinary celebrations tailored to your every need.
-                    </p>
+                  <h6 style="letter-spacing: 4px; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold; color: #F69643;">ABOUT US</h6>
+                  <p style="line-height: 1.8; font-size: 15px; color: #cccccc;">
+                    The Plannerz is a premier event management company located in Karachi, specializing in orchestrating events from professional meetings to opulent weddings, ensuring extraordinary celebrations tailored to your needs.
+                  </p>
                 </div>
-    
-                <!-- Page Headings with Links -->
+          
+                <!-- Pages Section -->
                 <div class="col-md-4 mb-4">
-                    <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>PAGES<span style="color: #ffbb00;">]</span></h6>
-                    <div>
-                        <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Event Videos</a>
-                        <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Gallery</a>
-                        <a href="#" style="color: #000000; text-decoration: none; font-size: 17px; font-family: 'Satoshi', sans-serif; font-weight: bold;">Thematic Event</a>
-                    </div>
+                  <h6 style="letter-spacing: 4px; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold; color: #F69643;">PAGES</h6>
+                  <div>
+                    <a href="wedding and reception.html" style="color: #cccccc; text-decoration: none; display: block; margin-bottom: 1rem; font-size: 16px; font-weight: bold;">Event Videos</a>
+                    <a href="gallery.html" style="color: #cccccc; text-decoration: none; display: block; margin-bottom: 1rem; font-size: 16px; font-weight: bold;">Gallery</a>
+                    <a href="birthday.html" style="color: #cccccc; text-decoration: none; font-size: 16px; font-weight: bold;">Birthday Event</a>
+                  </div>
                 </div>
-    
-                <!-- Help Section with Links -->
+          
+                <!-- Help Section -->
                 <div class="col-md-4 mb-4">
-                    <h6 style="letter-spacing: 6px; margin-bottom: 1rem;"><span style="color: #ffbb00;">[</span>HELP<span style="color: #ffbb00;">]</span></h6>
-                    <div>
-                        <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Photography Packages</a>
-                        <a href="#" style="color: #000000; text-decoration: none; display: block; margin-bottom: 0.5rem; font-family: 'Satoshi', sans-serif; font-weight: bold;">Blogs</a>
-                        <a href="#" style="color: #000000; text-decoration: none; font-family: 'Satoshi', sans-serif; font-weight: bold;">Food and Catering</a>
-                    </div>
+                  <h6 style="letter-spacing: 4px; margin-bottom: 1.5rem; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: bold; color: #F69643;">HELP</h6>
+                  <div>
+                    <a href="photograph.html" style="color: #cccccc; text-decoration: none; display: block; margin-bottom: 1rem; font-size: 16px; font-weight: bold;">Photography Packages</a>
+                    <a href="contact.html" style="color: #cccccc; text-decoration: none; display: block; margin-bottom: 1rem; font-size: 16px; font-weight: bold;">Contact us</a>
+                    <a href="menu.html" style="color: #cccccc; text-decoration: none; font-size: 16px; font-weight: bold;">Menu</a>
+                  </div>
                 </div>
-            </div>
-    
-            <!-- Social Media Links -->
-            <div class="text-center mb-4">
-                <h4>Follow Us</h4>
-                <a href="https://facebook.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
+              </div>
+          
+              <!-- Social Media Links -->
+              <div class="text-center mb-5">
+                <h4 style="font-size: 24px; font-family: 'Roboto', sans-serif; color: #ffffff; margin-bottom: 2rem;">Follow Us</h4>
+                <a href="https://facebook.com" style="color: #fdfdfd; margin-right: 1rem; font-size: 22px;" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a href="https://instagram.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
+                <a href="https://instagram.com" style="color: #f8f7f3; margin-right: 1rem; font-size: 22px;" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://youtube.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
+                <a href="https://youtube.com" style="color: #ffffff; margin-right: 1rem; font-size: 22px;" target="_blank">
+                  <i class="fa-brands fa-youtube"></i>
                 </a>
-                <a href="https://linkedin.com" style="color: #000000; margin-right: 0.5rem; font-size: 25px; text-decoration: none;" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
+                <a href="https://linkedin.com" style="color: #fffdf3; margin-right: 1rem; font-size: 22px;" target="_blank">
+                  <i class="fa-brands fa-linkedin"></i>
                 </a>
-            </div>
-    
-            <!-- Contact Information and Footer Bottom -->
-            <div class="text-center">
-                <p style="margin-bottom: 1rem;">
-                    ThePlannerz Headquarters, 456 Celebration Avenue, Suite 200, Event City, EC 12345 | Email: info@theplannerz.com | Phone: +123 456 7890
+              </div>
+          
+              <!-- Contact Information and Footer Bottom -->
+              <div class="text-center">
+                <p style="margin-bottom: 1rem; color: #cccccc;">
+                  ThePlannerz Headquarters, 456 Celebration Avenue, Event City | Email: info@theplannerz.com | Phone: +123 456 7890
                 </p>
-                <p style="margin-bottom: 1rem;">
-                    © 2022, Company Inc. All rights reserved. @ The Plannerz Events
+                <p style="margin-bottom: 1rem; color: #cccccc;">
+                  © 2024, Company Inc. All rights reserved. @ The Plannerz Events
                 </p>
                 <div>
-                    <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
-                    <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Terms</a>
-                    <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline; margin-right: 1rem;">Careers</a>
-                    <a href="#" style="color: #000000; font-family: 'Nunito', sans-serif; text-decoration: underline;">Sitemap</a>
+                  <a href="#" style="color: #F69643; text-decoration: underline; margin-right: 1rem;">Privacy Policy</a>
+                  <a href="#" style="color: #F69643; text-decoration: underline; margin-right: 1rem;">Terms</a>
+                  <a href="#" style="color: #F69643; text-decoration: underline; margin-right: 1rem;">Careers</a>
+                  <a href="#" style="color: #F69643; text-decoration: underline;">Sitemap</a>
                 </div>
+              </div>
             </div>
-        </div>
-    </footer>
+          </footer>
+          
     
     
     
