@@ -18,51 +18,55 @@
             }
 
             /* Button styles */
-            .button {
-                cursor: pointer;
-                position: relative;
-                padding: 10px 24px;
-                font-size: 18px;
-                color: rgb(193, 163, 98);
-                border: 2px solid rgb(193, 163, 98);
-                border-radius: 34px;
-                background-color: transparent;
-                font-weight: 600;
-                transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-                overflow: hidden;
-            }
+           /* Existing button styles */
+.button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: rgb(193, 163, 98);
+    border: 2px solid rgb(193, 163, 98);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+}
 
-            .d {
-                justify-content: space-around;
-            }
+.d {
+    justify-content: space-around;
+}
 
-            .button::before {
-                content: '';
-                position: absolute;
-                inset: 0;
-                margin: auto;
-                width: 50px;
-                height: 50px;
-                border-radius: inherit;
-                scale: 0;
-                z-index: -1;
-                background-color: rgb(193, 163, 98);
-                transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-            }
+.button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(193, 163, 98);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
 
-            .button:hover::before {
-                scale: 3;
-            }
+.button:hover::before {
+    scale: 3;
+}
 
-            .button:hover {
-                color: #212121;
-                scale: 1.1;
-                box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
-            }
+.button:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4);
+}
 
-            .button:active {
-                scale: 1;
-            }
+.button:active {
+    scale: 1;
+}
+
+/* Responsiveness for mobile screens */
+
 
             body {
                 background-image: url(images/art.jpg.jpg);
@@ -118,6 +122,7 @@
                 height: 300px;
             }
         /* From Uiverse.io by SouravBandyopadhyay */ 
+/* Existing styles for cards */
 .card-title {
   color: #262626;
   font-size: 1.5em;
@@ -131,10 +136,6 @@
   font-weight: 400;
   line-height: 1.5em;
   color: #452c2c;
-}
-
-.small-desc {
-  font-size: 1em;
 }
 
 .go-corner {
@@ -202,6 +203,8 @@
   transition: all 0.5s ease-out;
   color: #000000;
 }
+
+
 
 /* From Uiverse.io by satyamchaudharydev */ 
 .but {
@@ -272,6 +275,39 @@
     left: 100%;
   }
 }
+@media (max-width: 576px){
+.about{
+    background:rgb(237, 237, 237,.1);
+    backdrop-filter: blur(20px);
+    height: 420px;
+}
+/* Responsiveness for mobile screens */
+
+.d-flex {
+    flex-direction: column;
+}
+
+.card {
+    max-width: 100%;
+    margin: 10px 0;
+}
+.d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 14px;
+    }
+    body {
+      background-size: cover; /* Keep the image fully displayed */
+        background-position: center;
+        background-attachment: fixed; /* Makes sure the image stays static while scrolling */
+        min-height: 100vh;
+     }
+}
 
         </style>
     </head>
@@ -289,13 +325,10 @@
         </h6>
         <br><br>
         <div class="d-flex d justify-content-center">
-            <button class="button me-3" onclick="btn1()">
-                Sign Up
-            </button>
-            <button class="button"  onclick="btn2()">
-                Sign In
-            </button>
-        </div>
+          <button class="button me-3" onclick="btn1()">Sign Up</button>
+          <button class="button me-3" onclick="btn2()">Sign In</button>
+      </div>
+      
         <script>
           function btn1(){
             window.location.href="signup.html"
@@ -322,42 +355,47 @@
         
         <!-- Services Section -->
        <!-- Services Section -->
-<section class="container my-5">
-    <h3 class="section-title">Our Services</h3>
-    <div class="row text-center section-content">
-        <!-- /* From Uiverse.io by joe-watson-sbf */  -->
-         <div class="d-flex justify-content-center">
-<!-- /* From Uiverse.io by SouravBandyopadhyay */  -->
- <div class="card">
-      <p class="card-title">Event Planning</p>
-      <p class="small-desc" style="color: #020000;">
-        Comprehensive event planning services that cover everything from conceptualization to execution.
-      </p>
-      <div class="go-corner">
-        <div class="go-arrow">→</div>
-      </div>
-    </div>
-    <div class="card">
-      <p class="card-title">Venue Sourcing</p>
-      <p class="small-desc" style="color: #020000;">
-        Let us help you find the perfect location that meets your needs and exceeds your expectations.
-      </p>
-      <div class="go-corner">
-        <div class="go-arrow">→</div>
-      </div>
-    </div>
-    <div class="card">
-      <p class="card-title">Catering</p>
-      <p class="small-desc" style="color: #020000;">
-        Delicious, customized menus to suit every taste and dietary requirement.
-      </p>
-      <div class="go-corner">
-        <div class="go-arrow">→</div>
-      </div>
-    </div>
-    </div>
-</div>
-</section>
+       <section class="container my-5">
+        <h3 class="section-title">Our Services</h3>
+        <div class="row text-center section-content">
+            <!-- Wrapper for the cards to center them on desktop screens -->
+            <div class="d-flex flex-wrap justify-content-center">
+                <!-- Event Planning Card -->
+                <div class="card">
+                    <p class="card-title">Event Planning</p>
+                    <p class="small-desc" style="color: #020000;">
+                        Comprehensive event planning services that cover everything from conceptualization to execution.
+                    </p>
+                    <div class="go-corner">
+                        <div class="go-arrow">→</div>
+                    </div>
+                </div>
+    
+                <!-- Venue Sourcing Card -->
+                <div class="card">
+                    <p class="card-title">Venue Sourcing</p>
+                    <p class="small-desc" style="color: #020000;">
+                        Let us help you find the perfect location that meets your needs and exceeds your expectations.
+                    </p>
+                    <div class="go-corner">
+                        <div class="go-arrow">→</div>
+                    </div>
+                </div>
+    
+                <!-- Catering Card -->
+                <div class="card">
+                    <p class="card-title">Catering</p>
+                    <p class="small-desc" style="color: #020000;">
+                        Delicious, customized menus to suit every taste and dietary requirement.
+                    </p>
+                    <div class="go-corner">
+                        <div class="go-arrow">→</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 <br>
 <br>
 <br>

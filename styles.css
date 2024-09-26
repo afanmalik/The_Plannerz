@@ -7,12 +7,7 @@ color: aliceblue;
 scroll-behavior: smooth;
  }
  .fix{
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-image: url(https://img.freepik.com/premium-photo/intricate-floral-design-with-swirls-leaf-motifs-adorns-beige-background-providing-elegant-sophisticated-template-design-creativity_127746-8575.jpg?w=996);
-  background-attachment: fixed;
+  
  }
  
  nav{
@@ -82,8 +77,14 @@ scroll-behavior: smooth;
   box-shadow: red;
 }
 .body1{
-  background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(https://img.freepik.com/premium-photo/intricate-floral-design-with-swirls-leaf-motifs-adorns-beige-background-providing-elegant-sophisticated-template-design-creativity_127746-8575.jpg?w=996);
+  background-attachment: fixed;
 }
+
 .body1::selection{
   background-color: #f00000;
 }
@@ -143,8 +144,13 @@ scroll-behavior: smooth;
  
 }
 .hall{
-  height: 250px;
-  width: 400px;
+  height: auto;
+  width: 100%;
+}
+@media (max-width: 576px) {
+  .hall {
+      height: auto; /* Adjust height automatically based on aspect ratio */
+  }
 }
 .about{
   border-radius: 60px 20px 80px 40px;

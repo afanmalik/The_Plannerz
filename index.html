@@ -98,7 +98,35 @@
     padding: 10px 20px;
     font-size: 18px;
 }
+@media (max-width: 768px) {
+    .hall {
+        width: 100%; /* Full width on mobile */
+    }
 
+    .item {
+        margin-bottom: 20px; /* Add spacing between items */
+    }
+
+    .container-fluid {
+        padding: 15px; /* Adjust container padding */
+    }
+}
+.blur {
+    backdrop-filter: blur(10px); /* Example blur effect */
+}
+
+.line {
+    font-weight: bold; /* Example styling for headings */
+}
+
+.hall {
+    width: 100%; /* Set width to 100% for images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.tag {
+    text-align: center; /* Center-align the tag */
+}
         </style>
     </head>
 
@@ -198,59 +226,54 @@
             <br>
             <br>
 
-            <div>
+            <div style="background-color: #f8f9fa; padding: 20px;">
                 <h2 class="text-center wel">WELCOME</h2>
-                <p class="text-center p1">We plans & design events that  captures imagination<br></p>
-                <div class="con2">
-                    <div class="container">
-                        <div class="row g-3">
-                            <div class="col-md-4 col-sm-6 col-12 mb-4 text-center">
-                                <div class="image-container">
-                                    <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 40px 0 40px 0; border: 6px solid black;" class="img-fluid" src="https://media.istockphoto.com/id/1192752523/photo/banquet-room-with-dining-tables-for-guests-during-the-wedding-ceremony-the-tent-is-decorated.jpg?s=1024x1024&w=is&k=20&c=OLszK8LYcXeZjta8FpFoCC43lhDlhl3MXLH8_8XtXXU=" alt="Wedding Events">
-                                    <h4 class="h mt-2">Wedding Events</h4>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12 mb-4 text-center">
-                                <div class="image-container">
-                                    <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 40px 0 40px 0; border: 6px solid black;" class="img-fluid" src="https://media.istockphoto.com/id/650655146/photo/catering-food-wedding-event-table.jpg?s=1024x1024&w=is&k=20&c=OdtF8sPw42z6DzhWibQsvDuBA3OhYduPHOBzpJzy_fc=" alt="Catering Services">
-                                    <h4 class="h mt-2">Catering Services</h4>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12 mb-4 text-center">
-                                <div class="image-container">
-                                    <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 40px 0 40px 0; border: 6px solid black;" class="img-fluid" src="https://i.pinimg.com/236x/90/0d/03/900d03fc90748b9d5710f2fea6b761a1.jpg" alt="Photography">
-                                    <h4 class="h mt-2">Photography</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-md-4 col-sm-6 col-12 mb-4 text-center">
-                                <div class="image-container">
-                                    <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 40px 0 40px 0; border: 6px solid black;" class="img-fluid" src="https://i.pinimg.com/originals/13/17/ac/1317ac694cf5ec9932199994a5be8511.jpg" alt="Business Seminar">
-                                    <h4 class="h mt-2">Business Seminar</h4>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12 mb-4 text-center">
-                                <div class="image-container">
-                                    <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 40px 0 40px 0; border: 6px solid black;" class="img-fluid" src="https://www.rajwadaevents.com/uploaded-files/feature-images/Corporate-Events03_50_48.jpg" alt="Corporate Events">
-                                    <h4 class="h mt-2">Corporate Events</h4>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6 col-12 mb-4 text-center">
-                                <div class="image-container">
-                                    <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 40px 0 40px 0; border: 6px solid black;" class="img-fluid" src="https://th.bing.com/th/id/OIP.frmj6OXflpfzQoEgoX7B-gAAAA?rs=1&pid=ImgDetMain" alt="Birthday Events">
-                                    <h4 class="h mt-2">Birthday Events</h4>
-                                </div>
-                            </div>
+                <p class="text-center p1">We plan & design events that capture imagination<br></p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                        <div style="overflow: hidden; border-radius: 20px; transition: transform 0.3s;">
+                            <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 20px; transition: transform 0.3s;" src="https://media.istockphoto.com/id/1192752523/photo/banquet-room-with-dining-tables-for-guests-during-the-wedding-ceremony-the-tent-is-decorated.jpg?s=1024x1024&w=is&k=20&c=OLszK8LYcXeZjta8FpFoCC43lhDlhl3MXLH8_8XtXXU=" alt="Wedding Events" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <h4 style="margin-top: 10px;">Wedding Events</h4>
                         </div>
                     </div>
-                    
+                    <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                        <div style="overflow: hidden; border-radius: 20px; transition: transform 0.3s;">
+                            <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 20px; transition: transform 0.3s;" src="https://media.istockphoto.com/id/650655146/photo/catering-food-wedding-event-table.jpg?s=1024x1024&w=is&k=20&c=OdtF8sPw42z6DzhWibQsvDuBA3OhYduPHOBzpJzy_fc=" alt="Catering Services" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <h4 style="margin-top: 10px;">Catering Services</h4>
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                        <div style="overflow: hidden; border-radius: 20px; transition: transform 0.3s;">
+                            <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 20px; transition: transform 0.3s;" src="https://i.pinimg.com/236x/90/0d/03/900d03fc90748b9d5710f2fea6b761a1.jpg" alt="Photography" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <h4 style="margin-top: 10px;">Photography</h4>
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                        <div style="overflow: hidden; border-radius: 20px; transition: transform 0.3s;">
+                            <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 20px; transition: transform 0.3s;" src="https://i.pinimg.com/originals/13/17/ac/1317ac694cf5ec9932199994a5be8511.jpg" alt="Business Seminar" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <h4 style="margin-top: 10px;">Business Seminar</h4>
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                        <div style="overflow: hidden; border-radius: 20px; transition: transform 0.3s;">
+                            <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 20px; transition: transform 0.3s;" src="https://www.rajwadaevents.com/uploaded-files/feature-images/Corporate-Events03_50_48.jpg" alt="Corporate Events" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <h4 style="margin-top: 10px;">Corporate Events</h4>
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 300px; max-width: 300px; text-align: center;">
+                        <div style="overflow: hidden; border-radius: 20px; transition: transform 0.3s;">
+                            <img style="height: 250px; width: 100%; object-fit: cover; border-radius: 20px; transition: transform 0.3s;" src="https://th.bing.com/th/id/OIP.frmj6OXflpfzQoEgoX7B-gAAAA?rs=1&pid=ImgDetMain" alt="Birthday Events" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <h4 style="margin-top: 10px;">Birthday Events</h4>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            
                 
                 
                 <br>
                 <br>
-                <h3 class="text-center p2">Let's create unforgettable moments with "ThePlannerz"</h3>
+               
             </div>
             <br>
             <br>
@@ -275,12 +298,12 @@
         <div class="container-fluid blur">
             <h1 class="line text-center mb-4">Find Best Marriage Hall And Marquees In Pakistan</h1>
             <div class="owl-carousel owl-theme ">
-                <div class="item"><div><img class="hall" src="https://th.bing.com/th/id/R.852151792eac4c5fb2b0c0bfe3319a18?rik=RGFKGjxL4TsWrA&riu=http%3a%2f%2fwww.venuebazaar.pk%2fAdmin%2fGallery_Hall%2f91%2f2-min.jpg&ehk=QU3K5XrB4AzatdpxD0SVmozPetQ4OYLPK4hO7JA0YaA%3d&risl=&pid=ImgRaw&r=0" alt=""></div><h4 class="tag">The Ritz Banqueet</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://rentkea.com/thisisthedirectory/uploads/2022/12/The-Grand-Marquee-Rentkea-Karachi-1.jpg" alt=""></div><h4 class="tag">The Grand Marquee</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://th.bing.com/th/id/R.31d4016bfcd8bb3ccda14f637f12a794?rik=ccKtwmuPlFDonw&riu=http%3a%2f%2fwww.venuebazaar.pk%2fAdmin%2fGallery_Hall%2f31%2f6-min.jpg&ehk=9swFq3zgiSaAs%2bO2lpBy31maThvBL793yeqVaLlHGT8%3d&risl=&pid=ImgRaw&r=0" alt=""></div><h4 class="tag">Royal Shadi Hall</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://yannidesignstudio.com/app/uploads/2019/08/pearl-banquet-and-conference-center-wedding-ceremony-reception-chicago-roselle-venue-indian-sangeet-garba-mehndi-drapery-backdrop-decor-colorful-decorations-ideas-candles-lights-floral-centerpieces-marriage.jpg" alt=""></div><h4 class="tag">Pearl Banqueet</h4><div></div></div>
-                <div class="item"><div><img class="hall" src="https://eventza.pk/images/taj-banquets-nazimabad-town-karachi.jpg" alt=""></div><h4 class="tag">Taj Banqueet</h4><div></div></div>
-                <div class="item"><div><img class="hall" height="270px" src="https://rentkea.com/thisisthedirectory/uploads/2022/12/The-Imperial-Marquees-Rentkea-karachi-7.jpg" alt=""></div><h4 class="tag">The Imperial Marquee</h4><div></div></div>
+                <div class="item"><div><img class="hall img-fluid" src="https://th.bing.com/th/id/R.852151792eac4c5fb2b0c0bfe3319a18?rik=RGFKGjxL4TsWrA&riu=http%3a%2f%2fwww.venuebazaar.pk%2fAdmin%2fGallery_Hall%2f91%2f2-min.jpg&ehk=QU3K5XrB4AzatdpxD0SVmozPetQ4OYLPK4hO7JA0YaA%3d&risl=&pid=ImgRaw&r=0" alt=""></div><h4 class="tag">The Ritz Banqueet</h4><div></div></div>
+                <div class="item"><div><img class="hall img-fluid" height="270px" src="https://rentkea.com/thisisthedirectory/uploads/2022/12/The-Grand-Marquee-Rentkea-Karachi-1.jpg" alt=""></div><h4 class="tag">The Grand Marquee</h4><div></div></div>
+                <div class="item"><div><img class="hall img-fluid" height="270px" src="https://th.bing.com/th/id/R.31d4016bfcd8bb3ccda14f637f12a794?rik=ccKtwmuPlFDonw&riu=http%3a%2f%2fwww.venuebazaar.pk%2fAdmin%2fGallery_Hall%2f31%2f6-min.jpg&ehk=9swFq3zgiSaAs%2bO2lpBy31maThvBL793yeqVaLlHGT8%3d&risl=&pid=ImgRaw&r=0" alt=""></div><h4 class="tag">Royal Shadi Hall</h4><div></div></div>
+                <div class="item"><div><img class="hall img-fluid" height="270px" src="https://yannidesignstudio.com/app/uploads/2019/08/pearl-banquet-and-conference-center-wedding-ceremony-reception-chicago-roselle-venue-indian-sangeet-garba-mehndi-drapery-backdrop-decor-colorful-decorations-ideas-candles-lights-floral-centerpieces-marriage.jpg" alt=""></div><h4 class="tag">Pearl Banqueet</h4><div></div></div>
+                <div class="item"><div><img class="hall img-fluid" src="https://eventza.pk/images/taj-banquets-nazimabad-town-karachi.jpg" alt=""></div><h4 class="tag">Taj Banqueet</h4><div></div></div>
+                <div class="item"><div><img class="hall img-fluid" height="270px" src="https://rentkea.com/thisisthedirectory/uploads/2022/12/The-Imperial-Marquees-Rentkea-karachi-7.jpg" alt=""></div><h4 class="tag">The Imperial Marquee</h4><div></div></div>
                 
             </div>
         </div>
